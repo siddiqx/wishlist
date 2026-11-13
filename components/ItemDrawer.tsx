@@ -70,19 +70,6 @@ function ItemDrawerContent({
     setCurrentImageIndex((prev) => (prev < imagesList.length - 1 ? prev + 1 : 0));
   };
 
-  // Derive domain from link
-  let domain = "";
-  let isSearchUrl = false;
-  if (item.link) {
-    try {
-      const urlObj = new URL(item.link);
-      domain = urlObj.hostname.replace(/^www\./, "");
-      isSearchUrl = domain.includes("google.") || !item.linkVerified;
-    } catch {
-      domain = "product-link";
-    }
-  }
-
   const handleNotesChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setLocalNotes(e.target.value);
     store.setItemNotes(item.id, e.target.value);
@@ -109,11 +96,11 @@ function ItemDrawerContent({
   return (
     <div className="flex flex-col h-full bg-[#F7F7F5] overflow-hidden">
       {/* Sticky Top Header with Prev/Next, Title & Close */}
-      <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4 shrink-0 z-20">
+      <div className="px-4 sm:px-6 py-3 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-3 shrink-0 z-20">
         <div className="flex items-center gap-1.5">
           <button
             onClick={onPrev}
-            className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
+            className="p-2 rounded-xl border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] active:scale-95 transition-all"
             title="Previous item"
             aria-label="Previous item"
           >
@@ -121,7 +108,7 @@ function ItemDrawerContent({
           </button>
           <button
             onClick={onNext}
-            className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
+            className="p-2 rounded-xl border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] active:scale-95 transition-all"
             title="Next item"
             aria-label="Next item"
           >
@@ -130,12 +117,12 @@ function ItemDrawerContent({
         </div>
 
         {/* Action icons right */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <button
             onClick={() => store.togglePin(item.id)}
-            className={`p-1.5 rounded-lg border transition-all ${
+            className={`p-2 rounded-xl border transition-all active:scale-95 ${
               item.isPinned
-                ? "bg-amber-500 text-white border-amber-600"
+                ? "bg-amber-500 text-white border-amber-600 shadow-xs"
                 : "border-[#E8E8E4] text-[#57574F] hover:bg-[#F1F1EE]"
             }`}
             title="Pin item"
@@ -146,9 +133,9 @@ function ItemDrawerContent({
 
           <button
             onClick={() => store.toggleCompareItem(item.id)}
-            className={`p-1.5 rounded-lg border transition-all ${
+            className={`p-2 rounded-xl border transition-all active:scale-95 ${
               isCompared
-                ? "bg-[#4F46E5] text-white border-indigo-700"
+                ? "bg-[#4F46E5] text-white border-indigo-700 shadow-xs"
                 : "border-[#E8E8E4] text-[#57574F] hover:bg-[#F1F1EE]"
             }`}
             title="Compare item"
@@ -159,7 +146,7 @@ function ItemDrawerContent({
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
+            className="p-2 rounded-xl border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] active:scale-95 transition-all"
             aria-label="Close detail modal"
           >
             <X className="w-5 h-5" />
@@ -235,7 +222,10 @@ function ItemDrawerContent({
 
           {/* Thumbnail Strip */}
           {hasMultipleImages && (
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5">
+            <div
+              className="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5 no-scrollbar"
+              style={{ WebkitOverflowScrolling: "touch" }}
+            >
               {imagesList.map((imgSrc, idx) => {
                 const isActive = idx === currentImageIndex;
                 return (
@@ -521,20 +511,22 @@ function ItemDrawerContent({
       </div>
 
       {/* Sticky Bottom Bar with Price, Status & Product Page */}
-      <div className="p-4 sm:p-5 bg-white border-t border-[#E8E8E4] flex flex-col sm:flex-row sm:items-center justify-between gap-4 shrink-0 shadow-lg z-20">
-        <div>
-          <div className="text-[10px] font-semibold uppercase tracking-wider text-[#8A8A80]">
-            Estimated Investment
+      <div className="p-3.5 sm:p-5 pb-[max(1rem,env(safe-area-inset-bottom))] bg-white border-t border-[#E8E8E4] flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0 shadow-lg z-20">
+        <div className="flex items-baseline sm:block justify-between">
+          <div>
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-[#8A8A80]">
+              Estimated Investment
+            </div>
+            <div className="text-xl sm:text-2xl font-bold text-[#111110] tracking-tight tabular-nums">
+              {price.usd}
+            </div>
           </div>
-          <div className="text-xl sm:text-2xl font-bold text-[#111110] tracking-tight tabular-nums">
-            {price.usd}
-          </div>
-          <div className="text-[11px] font-mono text-[#57574F]">
+          <div className="text-[11px] font-mono text-[#57574F] text-right sm:text-left sm:mt-0.5">
             {price.inr} &middot; ₹{rate}/$
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 w-full sm:w-auto">
           {/* Status Select */}
           <select
             value={item.status}
@@ -544,31 +536,27 @@ function ItemDrawerContent({
               )
             }
             aria-label="Change status"
-            className="px-3 py-2.5 rounded-xl border border-[#E8E8E4] bg-white text-xs font-semibold text-[#111110] focus:outline-none focus:ring-1 focus:ring-[#4F46E5] cursor-pointer"
+            className="w-full sm:w-auto px-3 py-2.5 rounded-xl border border-[#E8E8E4] bg-[#F7F7F5] sm:bg-white text-xs font-semibold text-[#111110] focus:outline-none focus:ring-1 focus:ring-[#4F46E5] cursor-pointer text-center"
           >
-            <option value="wishlist">Status: Wishlist</option>
-            <option value="planned">Status: Planned</option>
-            <option value="saving">Status: Saving</option>
-            <option value="bought">Status: Bought</option>
+            <option value="wishlist">Wishlist</option>
+            <option value="planned">Planned</option>
+            <option value="saving">Saving</option>
+            <option value="bought">Bought</option>
           </select>
 
           {/* View Product Button */}
-          {item.link && (
+          {item.link ? (
             <a
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#111110] text-white text-xs font-semibold hover:bg-stone-800 transition-colors shadow-xs"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-[#111110] text-white text-xs font-semibold hover:bg-stone-800 transition-colors shadow-xs"
             >
-              <span>View on {domain}</span>
-              {isSearchUrl ? (
-                <span className="px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 text-[10px] font-mono">
-                  verify
-                </span>
-              ) : (
-                <ExternalLink className="w-3.5 h-3.5" />
-              )}
+              <span className="truncate">View Product</span>
+              <ExternalLink className="w-3.5 h-3.5 shrink-0" />
             </a>
+          ) : (
+            <div />
           )}
         </div>
       </div>
@@ -635,7 +623,7 @@ export function ItemDrawer() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="w-full sm:w-[90vw] md:w-[680px] lg:w-[760px] max-w-full bg-[#F7F7F5] border-l border-[#E8E8E4] shadow-2xl flex flex-col h-full overflow-hidden"
+            className="w-full sm:w-[90vw] md:w-[680px] lg:w-[760px] max-w-full bg-[#F7F7F5] border-l border-[#E8E8E4] shadow-2xl flex flex-col h-dvh overflow-hidden"
           >
             <ItemDrawerContent
               key={item.id}

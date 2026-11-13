@@ -56,7 +56,7 @@ export function BackupModal() {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 overflow-y-auto p-3 sm:p-6 md:p-12">
+      <div className="fixed inset-0 z-50 overflow-y-auto p-2 sm:p-6 md:p-12">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -73,19 +73,19 @@ export function BackupModal() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 16 }}
             transition={{ type: "spring", damping: 25, stiffness: 350 }}
-            className="w-full max-w-xl rounded-2xl bg-[#F7F7F5] border border-[#E8E8E4] text-left shadow-2xl overflow-hidden flex flex-col"
+            className="w-full max-w-xl rounded-2xl bg-[#F7F7F5] border border-[#E8E8E4] text-left shadow-2xl overflow-hidden flex flex-col my-auto"
           >
             {/* Header */}
-            <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4">
-              <div className="flex items-center gap-2">
-                <Settings2 className="w-5 h-5 text-[#4F46E5]" />
-                <h2 className="text-base font-semibold text-[#111110]">
+            <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2 min-w-0">
+                <Settings2 className="w-5 h-5 text-[#4F46E5] shrink-0" />
+                <h2 className="text-base font-semibold text-[#111110] truncate">
                   Catalogue Preferences &amp; Portability
                 </h2>
               </div>
               <button
                 onClick={() => store.setBackupModalOpen(false)}
-                className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
+                className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors shrink-0"
                 aria-label="Close dialog"
               >
                 <X className="w-5 h-5" />
@@ -93,17 +93,17 @@ export function BackupModal() {
             </div>
 
             {/* Content */}
-            <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 text-xs">
+            <div className="p-3.5 sm:p-6 space-y-4 sm:space-y-6 text-xs pb-[max(1rem,env(safe-area-inset-bottom))]">
               {/* Export Section */}
-              <div className="p-4 rounded-xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
-                <div className="flex items-center justify-between">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div>
                     <h3 className="font-semibold text-[#111110]">Export Plan &amp; Settings</h3>
-                    <p className="text-[#8A8A80] text-[11px]">
+                    <p className="text-[#8A8A80] text-[11px] mt-0.5">
                       Export a secure snapshot containing your personal notes, statuses, bookmarks, and budget plan.
                     </p>
                   </div>
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5 shrink-0 self-end sm:self-center">
                     <button
                       onClick={handleCopy}
                       className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#111110] font-medium transition-colors"
@@ -123,10 +123,10 @@ export function BackupModal() {
               </div>
 
               {/* Import Section */}
-              <div className="p-4 rounded-xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
                 <div>
                   <h3 className="font-semibold text-[#111110]">Import Saved Plan</h3>
-                  <p className="text-[#8A8A80] text-[11px]">
+                  <p className="text-[#8A8A80] text-[11px] mt-0.5">
                     Paste previously exported configuration to restore your personal notes and customized plan.
                   </p>
                 </div>
@@ -164,14 +164,14 @@ export function BackupModal() {
               </div>
 
               {/* Reset Section */}
-              <div className="p-4 rounded-xl bg-[#F1F1EE] border border-[#E8E8E4] flex items-center justify-between gap-4">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-[#F1F1EE] border border-[#E8E8E4] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
                   <AlertTriangle className="w-4 h-4 text-[#D97706] shrink-0" />
                   <span className="text-[#57574F]">Reset catalogue to initial state?</span>
                 </div>
                 <button
                   onClick={handleReset}
-                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-[#DC2626] hover:bg-rose-50 font-medium transition-colors"
+                  className="inline-flex items-center justify-center gap-1 px-3 py-1.5 rounded-lg text-[#DC2626] hover:bg-rose-50 font-medium transition-colors self-end sm:self-center"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   <span>Reset Catalogue</span>

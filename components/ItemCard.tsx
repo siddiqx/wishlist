@@ -125,24 +125,26 @@ export function ItemCard({ item, isHero = false }: ItemCardProps) {
       </div>
 
       {/* Card Body */}
-      <div className="flex flex-col flex-1 p-4 sm:p-5">
+      <div className="flex flex-col flex-1 p-3.5 sm:p-5">
         {/* Name (17px semibold) */}
-        <h3 className="font-semibold text-[#111110] group-hover:text-[#4F46E5] transition-colors leading-snug mb-1.5 line-clamp-1 text-[17px]">
+        <h3 className="font-semibold text-[#111110] group-hover:text-[#4F46E5] transition-colors leading-snug mb-1.5 line-clamp-1 text-base sm:text-[17px]">
           {item.name}
         </h3>
 
         {/* One-line summary (muted, 2-line clamp) */}
-        <p className="text-xs sm:text-[13px] text-[#57574F] line-clamp-2 leading-relaxed mb-4 flex-1">
+        <p className="text-xs sm:text-[13px] text-[#57574F] line-clamp-2 leading-relaxed mb-3 sm:mb-4 flex-1">
           {item.summary}
         </p>
 
-        {/* Spec Chips (Max 3) */}
+        {/* Spec Chips (Max 3 on desktop, top 2 on mobile) */}
         {item.specs.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mb-4">
+          <div className="flex flex-wrap gap-1.5 mb-3 sm:mb-4">
             {item.specs.slice(0, 3).map((spec, idx) => (
               <span
                 key={idx}
-                className="inline-flex text-[11px] px-2 py-0.5 rounded-md bg-[#F1F1EE] text-[#57574F] font-mono truncate max-w-full"
+                className={`text-[11px] px-2 py-0.5 rounded-md bg-[#F1F1EE] text-[#57574F] font-mono truncate max-w-full ${
+                  idx === 2 ? "hidden sm:inline-flex" : "inline-flex"
+                }`}
               >
                 <span className="text-[#8A8A80] mr-1">{spec.label}:</span>
                 <span className="font-medium text-[#111110]">{spec.value}</span>
@@ -173,10 +175,10 @@ export function ItemCard({ item, isHero = false }: ItemCardProps) {
           </div>
 
           {/* Quick Plan + Status Pill */}
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 shrink-0">
             <button
               onClick={handleInPlanToggle}
-              className={`px-2 py-1 rounded-lg text-xs font-medium border transition-all duration-150 ${
+              className={`px-2.5 py-1.5 rounded-lg text-xs font-medium border transition-all duration-150 touch-manipulation ${
                 item.isInPlan
                   ? "bg-[#EEF0FF] border-indigo-200 text-[#4F46E5] font-semibold"
                   : "bg-[#F7F7F5] border-[#E8E8E4] text-[#8A8A80] hover:text-[#111110]"
@@ -197,7 +199,7 @@ export function ItemCard({ item, isHero = false }: ItemCardProps) {
                 )
               }
               aria-label={`Change status for ${item.name}`}
-              className={`text-xs px-2 py-1 rounded-lg border font-medium focus:outline-none focus:ring-1 focus:ring-[#4F46E5] cursor-pointer ${statusBadge.bg}`}
+              className={`text-xs px-2 sm:px-2.5 py-1.5 rounded-lg border font-medium focus:outline-none focus:ring-1 focus:ring-[#4F46E5] cursor-pointer touch-manipulation ${statusBadge.bg}`}
             >
               <option value="wishlist">Wishlist</option>
               <option value="planned">Planned</option>

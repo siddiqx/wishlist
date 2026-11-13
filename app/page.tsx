@@ -98,11 +98,11 @@ export default function Home() {
                   {/* Category Title Header */}
                   <div className="flex items-center justify-between pb-2 border-b border-[#E8E8E4]">
                     <div className="flex items-center gap-2">
-                      <h3 className="font-display text-2xl font-normal text-[#111110]">
+                      <h3 className="font-display text-xl sm:text-2xl font-normal text-[#111110]">
                         {cat.name}
                       </h3>
                       <span className="text-xs font-mono text-[#8A8A80]">
-                        ({catItems.length} items)
+                        ({catItems.length})
                       </span>
                     </div>
 
@@ -115,7 +115,7 @@ export default function Home() {
                   </div>
 
                   {/* Cards Grid with clean responsive gap */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 sm:gap-6">
                     {displayItems.map((item, index) => (
                       <ItemCard
                         key={item.id}
@@ -152,7 +152,7 @@ export default function Home() {
           </div>
         ) : (
           /* Filtered Flat Grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 sm:gap-6">
             {filteredItems.map((item, index) => (
               <ItemCard
                 key={item.id}

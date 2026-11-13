@@ -47,7 +47,7 @@ export function CommandPalette() {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6 md:p-20">
+      <div className="fixed inset-0 z-50 overflow-y-auto p-2.5 sm:p-6 md:p-20 pt-12 sm:pt-20">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}

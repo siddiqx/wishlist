@@ -41,7 +41,7 @@ export function CompareModal() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 16 }}
             transition={{ type: "spring", damping: 25, stiffness: 350 }}
-            className="w-full max-w-5xl rounded-2xl sm:rounded-3xl bg-[#F7F7F5] border border-[#E8E8E4] text-left shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
+            className="w-full max-w-5xl rounded-2xl sm:rounded-3xl bg-[#F7F7F5] border border-[#E8E8E4] text-left shadow-2xl overflow-hidden flex flex-col max-h-[92dvh]"
           >
             {/* Modal Header */}
             <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-3 shrink-0">
@@ -75,7 +75,7 @@ export function CompareModal() {
             </div>
 
             {/* Content Area */}
-            <div className="flex-1 overflow-y-auto p-3 sm:p-6 space-y-4 sm:space-y-6">
+            <div className="flex-1 overflow-y-auto p-3 sm:p-6 space-y-4 sm:space-y-6 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
               {compareItems.length === 0 ? (
                 <div className="text-center py-12 text-[#8A8A80] space-y-2">
                   <p className="text-sm">No items selected for comparison.</p>
@@ -84,11 +84,11 @@ export function CompareModal() {
                   </p>
                 </div>
               ) : (
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto touch-pan-x">
                   <table className="w-full border-collapse text-left">
                     <thead>
                       <tr>
-                        <th className="p-3 bg-[#F1F1EE] border border-[#E8E8E4] text-xs font-semibold text-[#57574F] w-1/4">
+                        <th className="p-3 bg-[#F1F1EE] border border-[#E8E8E4] text-xs font-semibold text-[#57574F] min-w-[100px] sm:min-w-[120px] sm:w-1/4">
                           Attribute
                         </th>
                         {compareItems.map((item) => {
@@ -96,7 +96,7 @@ export function CompareModal() {
                           return (
                             <th
                               key={item.id}
-                              className="p-4 bg-white border border-[#E8E8E4] text-xs align-top relative min-w-[240px]"
+                              className="p-3.5 sm:p-4 bg-white border border-[#E8E8E4] text-xs align-top relative min-w-[190px] sm:min-w-[240px]"
                             >
                               <button
                                 onClick={() => store.removeCompareItem(item.id)}

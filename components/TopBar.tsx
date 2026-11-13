@@ -110,7 +110,7 @@ export function TopBar() {
             <Search className="w-5 h-5" />
           </button>
 
-          {/* View Mode Toggle */}
+          {/* View Mode Toggle (Grid/List on mobile, Grid/List/Roadmap on desktop) */}
           <div className="flex items-center bg-[#F1F1EE] p-0.5 rounded-xl border border-[#E8E8E4]">
             <button
               onClick={() => store.setViewMode("grid")}
@@ -122,7 +122,7 @@ export function TopBar() {
               title="Grid View"
               aria-label="Grid View"
             >
-              <LayoutGrid className="w-4 h-4" />
+              <LayoutGrid className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
             <button
               onClick={() => store.setViewMode("list")}
@@ -134,11 +134,11 @@ export function TopBar() {
               title="Compact List View"
               aria-label="Compact List View"
             >
-              <List className="w-4 h-4" />
+              <List className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
             <button
               onClick={() => store.setViewMode("roadmap")}
-              className={`p-1.5 rounded-lg text-xs font-medium transition-all ${
+              className={`hidden sm:block p-1.5 rounded-lg text-xs font-medium transition-all ${
                 store.viewMode === "roadmap"
                   ? "bg-white text-[#111110] shadow-xs"
                   : "text-[#57574F] hover:text-[#111110]"

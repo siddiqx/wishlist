@@ -176,23 +176,23 @@ export function BudgetDrawer() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="w-full sm:w-[90vw] md:w-[680px] lg:w-[760px] max-w-full bg-[#F7F7F5] border-l border-[#E8E8E4] shadow-2xl flex flex-col h-full overflow-hidden"
+            className="w-full sm:w-[90vw] md:w-[680px] lg:w-[760px] max-w-full bg-[#F7F7F5] border-l border-[#E8E8E4] shadow-2xl flex flex-col h-dvh overflow-hidden"
           >
             {/* Header */}
-            <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4 shrink-0">
-              <div className="flex items-center gap-2">
-                <Calculator className="w-5 h-5 text-[#4F46E5]" />
-                <h2 className="text-lg font-semibold text-[#111110]">
+            <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-3 shrink-0">
+              <div className="flex items-center gap-2 min-w-0">
+                <Calculator className="w-5 h-5 text-[#4F46E5] shrink-0" />
+                <h2 className="text-base sm:text-lg font-semibold text-[#111110] truncate">
                   Interactive Budget Planner
                 </h2>
-                <span className="px-2 py-0.5 rounded-full text-xs font-mono bg-[#F1F1EE] text-[#111110]">
-                  {planItems.length} items
+                <span className="px-2 py-0.5 rounded-full text-xs font-mono bg-[#F1F1EE] text-[#111110] shrink-0">
+                  {planItems.length}
                 </span>
               </div>
 
               <button
                 onClick={() => store.setBudgetDrawerOpen(false)}
-                className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
+                className="p-2 sm:p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors shrink-0"
                 aria-label="Close budget planner"
               >
                 <X className="w-5 h-5" />
@@ -200,26 +200,26 @@ export function BudgetDrawer() {
             </div>
 
             {/* Scrollable Body */}
-            <div className="flex-1 overflow-y-auto p-4 sm:p-8 space-y-5 sm:space-y-6">
+            <div className="flex-1 overflow-y-auto p-3.5 sm:p-8 space-y-4 sm:space-y-6 pb-[max(2rem,env(safe-area-inset-bottom))]">
               {/* Quick Actions Bar */}
-              <div className="flex flex-wrap items-center justify-between gap-2 p-3 rounded-xl bg-white border border-[#E8E8E4] shadow-xs text-xs">
-                <div className="flex items-center gap-2">
-                  <span className="text-[#8A8A80] font-medium">Quick plan:</span>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 p-3 rounded-xl bg-white border border-[#E8E8E4] shadow-xs text-xs">
+                <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                  <span className="text-[#8A8A80] font-medium hidden sm:inline">Quick plan:</span>
                   <button
                     onClick={selectAllNow}
-                    className="px-2.5 py-1 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#111110] font-medium transition-colors"
+                    className="flex-1 sm:flex-initial px-2.5 py-1.5 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#111110] font-medium transition-colors text-center"
                   >
-                    All &quot;Now&quot; Items
+                    All &quot;Now&quot;
                   </button>
                   <button
                     onClick={selectAll}
-                    className="px-2.5 py-1 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#111110] font-medium transition-colors"
+                    className="flex-1 sm:flex-initial px-2.5 py-1.5 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#111110] font-medium transition-colors text-center"
                   >
                     Select All
                   </button>
                   <button
                     onClick={clearAll}
-                    className="px-2.5 py-1 rounded-lg text-[#57574F] hover:text-[#111110] transition-colors"
+                    className="px-2.5 py-1.5 rounded-lg text-[#57574F] hover:text-[#111110] transition-colors"
                   >
                     Clear
                   </button>
@@ -227,7 +227,7 @@ export function BudgetDrawer() {
 
                 <button
                   onClick={exportCSV}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#111110] text-white font-medium hover:bg-stone-800 transition-colors"
+                  className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#111110] text-white font-medium hover:bg-stone-800 transition-colors w-full sm:w-auto"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Export Spreadsheet</span>
@@ -235,11 +235,11 @@ export function BudgetDrawer() {
               </div>
 
               {/* Running Grand Total Hero Card */}
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-[#111110] to-stone-900 text-white shadow-xl relative overflow-hidden">
-                <div className="flex items-center justify-between text-xs text-stone-400 mb-2">
+              <div className="p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-[#111110] to-stone-900 text-white shadow-xl relative overflow-hidden">
+                <div className="flex items-center justify-between text-xs text-stone-400 mb-2 gap-2 flex-wrap">
                   <span>Running Total (Selected in Plan)</span>
                   {/* Exchange rate widget */}
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5 shrink-0">
                     {editingRate ? (
                       <form onSubmit={handleRateSubmit} className="flex items-center gap-1">
                         <span className="text-stone-300 font-mono">₹</span>
@@ -272,7 +272,7 @@ export function BudgetDrawer() {
                   </div>
                 </div>
 
-                <div className="text-3xl sm:text-4xl font-bold tracking-tight mb-1 tabular-nums font-mono">
+                <div className="text-2xl sm:text-4xl font-bold tracking-tight mb-1 tabular-nums font-mono break-words">
                   ${oneTimeTotal.min.toLocaleString()} &ndash; ${oneTimeTotal.max.toLocaleString()}
                   <span className="text-sm font-normal text-stone-400 ml-2">USD</span>
                 </div>

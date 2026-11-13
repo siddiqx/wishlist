@@ -19,7 +19,7 @@ function StatCard({
 }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl bg-white border border-[#E8E8E4] p-5 shadow-[0_2px_8px_-2px_rgba(17,17,16,0.05)] hover:border-stone-300 hover:shadow-[0_8px_20px_-4px_rgba(17,17,16,0.08)] transition-all duration-200 ease-out ${className}`}
+      className={`relative overflow-hidden rounded-2xl bg-white border border-[#E8E8E4] p-3.5 sm:p-5 shadow-[0_2px_8px_-2px_rgba(17,17,16,0.05)] hover:border-stone-300 hover:shadow-[0_8px_20px_-4px_rgba(17,17,16,0.08)] transition-all duration-200 ease-out ${className}`}
     >
       <div className="relative z-10">{children}</div>
     </div>
@@ -185,12 +185,12 @@ export function Hero() {
             <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1">
               Catalogue Items
             </div>
-            <div className="text-xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums flex items-baseline gap-1.5">
+            <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-[#111110] tracking-tight tabular-nums flex items-baseline gap-1.5">
               <AnimatedNumber value={summary.totalItems} />
               <span className="text-xs font-normal text-[#8A8A80]">items</span>
             </div>
-            <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
-              Across 12 categorized blueprints
+            <div className="text-[10px] sm:text-xs text-[#57574F] mt-1.5 sm:mt-2 truncate">
+              Across 12 blueprints
             </div>
           </StatCard>
 
@@ -200,11 +200,11 @@ export function Hero() {
               <span className="truncate">Core One-Time</span>
               <span className="text-[10px] font-mono text-[#8A8A80] shrink-0 ml-1">₹{rate}/$</span>
             </div>
-            <div className="text-xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums">
+            <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-[#111110] tracking-tight tabular-nums font-mono">
               ${Math.round(summary.oneTimeUSD.min / 1000)}k&ndash;${Math.round(summary.oneTimeUSD.max / 1000)}k
             </div>
-            <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
-              ₹{(summary.oneTimeINR.min / 100000).toFixed(1)}L&ndash;₹{(summary.oneTimeINR.max / 100000).toFixed(1)}L INR
+            <div className="text-[10px] sm:text-xs text-[#57574F] mt-1.5 sm:mt-2 truncate font-mono">
+              ≈ ₹{(summary.oneTimeINR.min / 100000).toFixed(1)}L&ndash;₹{(summary.oneTimeINR.max / 100000).toFixed(1)}L
             </div>
           </StatCard>
 
@@ -212,16 +212,16 @@ export function Hero() {
           <StatCard>
             <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 flex items-center justify-between">
               <span>Acquired</span>
-              <span className="text-[11px] sm:text-xs font-semibold text-[#16A34A] flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" />
+              <span className="text-[10px] sm:text-xs font-semibold text-[#16A34A] flex items-center gap-1">
+                <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 {summary.percentageComplete}%
               </span>
             </div>
-            <div className="text-xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums flex items-baseline gap-1.5">
+            <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-[#111110] tracking-tight tabular-nums flex items-baseline gap-1 sm:gap-1.5">
               <AnimatedNumber value={summary.totalAcquired} />
               <span className="text-xs sm:text-sm font-normal text-[#8A8A80]">/ {summary.totalItems}</span>
             </div>
-            <div className="w-full h-1.5 bg-[#F1F1EE] rounded-full mt-3 overflow-hidden">
+            <div className="w-full h-1.5 bg-[#F1F1EE] rounded-full mt-2.5 sm:mt-3 overflow-hidden">
               <div
                 style={{ width: `${Math.max(summary.percentageComplete, 2)}%` }}
                 className="h-full bg-[#16A34A] rounded-full transition-all duration-700"
@@ -232,14 +232,14 @@ export function Hero() {
           {/* Stat 4: Monthly Running Cost */}
           <StatCard>
             <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 truncate">
-              Monthly Running Cost
+              Monthly Running
             </div>
-            <div className="text-xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums">
+            <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-[#111110] tracking-tight tabular-nums font-mono">
               ${summary.monthlyRecurringUSD.min}&ndash;${summary.monthlyRecurringUSD.max}
               <span className="text-xs font-normal text-[#8A8A80]">/mo</span>
             </div>
-            <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
-              Grooming, diet, gym, bike &amp; insurance
+            <div className="text-[10px] sm:text-xs text-[#57574F] mt-1.5 sm:mt-2 truncate">
+              Grooming, diet, gym, bike
             </div>
           </StatCard>
         </motion.div>

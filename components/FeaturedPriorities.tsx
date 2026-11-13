@@ -34,18 +34,18 @@ export function FeaturedPriorities() {
   return (
     <div className="mb-10 pb-4 border-b border-[#E8E8E4]">
       {/* Header with Navigation Arrows */}
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-[#EEF0FF] text-[#4F46E5] flex items-center justify-center">
+      <div className="flex items-center justify-between mb-4 gap-3">
+        <div className="flex items-center gap-2 min-w-0">
+          <div className="w-6 h-6 rounded-lg bg-[#EEF0FF] text-[#4F46E5] flex items-center justify-center shrink-0">
             <Star className="w-3.5 h-3.5 fill-[#4F46E5]" />
           </div>
-          <div>
+          <div className="min-w-0">
             <h3 className="font-semibold text-sm text-[#111110]">Top Priorities</h3>
-            <p className="text-xs text-[#8A8A80]">High-impact essentials scheduled for immediate acquisition</p>
+            <p className="text-xs text-[#8A8A80] truncate">High-impact essentials for immediate acquisition</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 shrink-0">
           <button
             onClick={() => scroll("left")}
             className="p-1.5 rounded-lg border border-[#E8E8E4] bg-white text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
