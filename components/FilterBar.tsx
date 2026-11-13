@@ -62,29 +62,39 @@ export function FilterBar() {
           </div>
 
           {/* Status Select */}
-          <select
-            value={store.statusFilter}
-            onChange={(e) => store.setStatusFilter(e.target.value)}
-            className="px-3 py-1.5 rounded-xl bg-white border border-[#E8E8E4] text-[#111110] font-medium hover:border-stone-400 focus:outline-none focus:ring-1 focus:ring-[#4F46E5] shadow-xs cursor-pointer"
-          >
-            <option value="all">Status: All</option>
-            <option value="wishlist">Wishlist</option>
-            <option value="planned">Planned</option>
-            <option value="saving">Saving</option>
-            <option value="bought">Bought</option>
-          </select>
+          <div className="relative">
+            <select
+              value={store.statusFilter}
+              onChange={(e) => store.setStatusFilter(e.target.value)}
+              className="appearance-none pl-3 pr-8 py-1.5 rounded-xl bg-white border border-[#E8E8E4] text-[#111110] text-xs font-medium hover:border-stone-400 focus:outline-none focus:ring-1 focus:ring-[#4F46E5] shadow-xs cursor-pointer"
+            >
+              <option value="all">Status: All</option>
+              <option value="wishlist">Wishlist</option>
+              <option value="planned">Planned</option>
+              <option value="saving">Saving</option>
+              <option value="bought">Bought</option>
+            </select>
+            <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#8A8A80]">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
 
           {/* Priority Select */}
-          <select
-            value={store.priorityFilter}
-            onChange={(e) => store.setPriorityFilter(e.target.value)}
-            className="px-3 py-1.5 rounded-xl bg-white border border-[#E8E8E4] text-[#111110] font-medium hover:border-stone-400 focus:outline-none focus:ring-1 focus:ring-[#4F46E5] shadow-xs cursor-pointer"
-          >
-            <option value="all">Priority: All</option>
-            <option value="high">High Priority</option>
-            <option value="medium">Medium Priority</option>
-            <option value="low">Low Priority</option>
-          </select>
+          <div className="relative">
+            <select
+              value={store.priorityFilter}
+              onChange={(e) => store.setPriorityFilter(e.target.value)}
+              className="appearance-none pl-3 pr-8 py-1.5 rounded-xl bg-white border border-[#E8E8E4] text-[#111110] text-xs font-medium hover:border-stone-400 focus:outline-none focus:ring-1 focus:ring-[#4F46E5] shadow-xs cursor-pointer"
+            >
+              <option value="all">Priority: All</option>
+              <option value="high">High Priority</option>
+              <option value="medium">Medium Priority</option>
+              <option value="low">Low Priority</option>
+            </select>
+            <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#8A8A80]">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
 
           {/* Pinned / Favourites Toggle */}
           <button

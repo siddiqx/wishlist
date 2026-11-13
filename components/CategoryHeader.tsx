@@ -7,6 +7,7 @@ import { useWishlistStore } from "@/lib/store";
 import { CATEGORIES } from "@/data/categories";
 import { INITIAL_WISHLIST_ITEMS } from "@/data/wishlist";
 import { formatUSD, formatINR } from "@/lib/format";
+import { ASSET_CACHE_KEY } from "./ItemVisual";
 
 export function CategoryHeader() {
   const store = useWishlistStore();
@@ -19,7 +20,7 @@ export function CategoryHeader() {
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
           <div>
             <h2 className="text-xl sm:text-2xl font-display font-medium text-[#111110]">
-              Curated Needs Catalogue
+              The Equipment Registry
             </h2>
             <p className="text-xs sm:text-sm text-[#57574F] mt-0.5">
               Browse all items or filter by category, timeline, priority, and status.
@@ -45,9 +46,10 @@ export function CategoryHeader() {
       {/* Banner Cover with Image & Soft Overlay */}
       <div className="relative h-44 sm:h-52 w-full overflow-hidden bg-stone-900">
         <Image
-          src={`/images/categories/${category.id}.webp`}
+          src={`/images/categories/${category.id}.webp?${ASSET_CACHE_KEY}`}
           alt={category.name}
           fill
+          unoptimized
           priority
           sizes="1280px"
           className="object-cover object-center opacity-65 scale-102"
@@ -55,9 +57,9 @@ export function CategoryHeader() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
         {/* Banner Content inside Cover */}
-        <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between text-white">
+        <div className="absolute inset-0 p-4 sm:p-8 flex flex-col justify-between text-white">
           <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/20 backdrop-blur-md border border-white/20 text-white">
+            <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold tracking-wider uppercase bg-white/20 backdrop-blur-md border border-white/20 text-white">
               <Layers className="w-3.5 h-3.5" />
               <span>Category Blueprint</span>
             </span>
@@ -72,7 +74,7 @@ export function CategoryHeader() {
           </div>
 
           <div>
-            <h2 className="font-display text-3xl sm:text-4xl font-normal text-white drop-shadow-sm tracking-tight">
+            <h2 className="font-display text-2xl sm:text-4xl font-normal text-white drop-shadow-sm tracking-tight">
               {category.name}
             </h2>
             <p className="text-xs sm:text-sm text-stone-200 mt-1 max-w-2xl drop-shadow line-clamp-1">
@@ -84,33 +86,60 @@ export function CategoryHeader() {
 
       {/* Expandable Meta Strip */}
       {isExpanded && (
-        <div className="p-5 bg-white border-t border-[#E8E8E4] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs">
-          <p className="text-[#57574F] max-w-2xl leading-relaxed">
-            {category.description}
-          </p>
+        <div className="flex flex-col bg-white border-t border-[#E8E8E4]">
+          <div className="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs">
+            <p className="text-[#57574F] max-w-2xl leading-relaxed">
+              {category.description}
+            </p>
 
-          <div className="flex items-center gap-4 shrink-0 sm:border-l sm:border-[#E8E8E4] sm:pl-6">
-            <div>
-              <div className="text-[10px] font-semibold uppercase tracking-wider text-[#8A8A80]">
-                Items
+            <div className="flex items-center gap-4 shrink-0 sm:border-l sm:border-[#E8E8E4] sm:pl-6">
+              <div>
+                <div className="text-[10px] font-semibold uppercase tracking-wider text-[#8A8A80]">
+                  Items
+                </div>
+                <div className="text-base font-bold text-[#111110] font-mono mt-0.5">
+                  {categoryItems.length}
+                </div>
               </div>
-              <div className="text-base font-bold text-[#111110] font-mono mt-0.5">
-                {categoryItems.length}
-              </div>
-            </div>
 
-            <div>
-              <div className="text-[10px] font-semibold uppercase tracking-wider text-[#8A8A80]">
-                Estimated Subtotal
-              </div>
-              <div className="text-base font-bold text-[#111110] font-mono mt-0.5">
-                {formatUSD(minCost)} &ndash; {formatUSD(maxCost)}
-              </div>
-              <div className="text-[10px] text-[#8A8A80] font-mono">
-                {formatINR(minCost, rate)} &ndash; {formatINR(maxCost, rate)}
+              <div>
+                <div className="text-[10px] font-semibold uppercase tracking-wider text-[#8A8A80]">
+                  Estimated Subtotal
+                </div>
+                <div className="text-base font-bold text-[#111110] font-mono mt-0.5">
+                  {formatUSD(minCost)} &ndash; {formatUSD(maxCost)}
+                </div>
+                <div className="text-[10px] text-[#8A8A80] font-mono">
+                  {formatINR(minCost, rate)} &ndash; {formatINR(maxCost, rate)}
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Contextual Architecture Notices */}
+          {category.id === "gaming-pc" && (
+            <div className="mx-5 mb-5 p-4 rounded-xl bg-[#F7F7F5] border border-[#E8E8E4] text-xs">
+              <div className="flex items-center gap-2 font-semibold text-[#111110] mb-1">
+                <span className="w-2 h-2 rounded-full bg-indigo-600" />
+                <span>Flagship Workstation Components &amp; Alternative Builds</span>
+              </div>
+              <p className="text-[#57574F] leading-relaxed">
+                The 9 items listed below represent the discrete hardware components of the <strong>Flagship Performance Build ($2,100 &ndash; $2,800)</strong>, centered on the Ryzen 7 9800X3D and RTX 5070 Ti for high-refresh 1440p gaming and creative workflows. Value-focused alternative components ($1,300 &ndash; $1,700) are detailed within each component&apos;s alternatives tab.
+              </p>
+            </div>
+          )}
+
+          {category.id === "bike" && (
+            <div className="mx-5 mb-5 p-4 rounded-xl bg-[#F7F7F5] border border-[#E8E8E4] text-xs">
+              <div className="flex items-center gap-2 font-semibold text-[#111110] mb-1">
+                <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                <span>Selecting Your Machine</span>
+              </div>
+              <p className="text-[#57574F] leading-relaxed">
+                Comparing 4 motorcycle platforms: <strong>Royal Enfield Interceptor 650</strong> (currently selected in plan), <strong>Himalayan 450</strong>, <strong>Triumph Speed 400</strong>, and <strong>KTM 390 Duke</strong>. Adding any motorcycle to your plan automatically replaces the previously selected machine so your overall budget remains accurate without duplication.
+              </p>
+            </div>
+          )}
         </div>
       )}
     </div>

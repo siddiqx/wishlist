@@ -36,8 +36,8 @@ export function CategoryTabs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={scrollContainerRef}
-          className="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-0.5"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1 px-1 overscroll-x-contain"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
         >
           {/* "All Items" tab */}
           <button

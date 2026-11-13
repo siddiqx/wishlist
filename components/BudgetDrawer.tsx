@@ -93,7 +93,11 @@ export function BudgetDrawer() {
   };
 
   const selectAllNow = () => {
-    const nowIds = INITIAL_WISHLIST_ITEMS.filter((i) => i.when === "now").map((i) => i.id);
+    const nowIds = INITIAL_WISHLIST_ITEMS.filter((i) => {
+      if (i.when !== "now") return false;
+      if (i.candidateGroup === "motorcycle-choice" && i.id !== "re-interceptor-650") return false;
+      return true;
+    }).map((i) => i.id);
     store.setInPlanBatch(nowIds, true);
   };
 
@@ -172,10 +176,10 @@ export function BudgetDrawer() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="w-screen max-w-2xl bg-[#F7F7F5] border-l border-[#E8E8E4] shadow-2xl flex flex-col h-full overflow-hidden"
+            className="w-full sm:w-[90vw] md:w-[680px] lg:w-[760px] max-w-full bg-[#F7F7F5] border-l border-[#E8E8E4] shadow-2xl flex flex-col h-full overflow-hidden"
           >
             {/* Header */}
-            <div className="px-6 py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4 shrink-0">
+            <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4 shrink-0">
               <div className="flex items-center gap-2">
                 <Calculator className="w-5 h-5 text-[#4F46E5]" />
                 <h2 className="text-lg font-semibold text-[#111110]">
@@ -196,7 +200,7 @@ export function BudgetDrawer() {
             </div>
 
             {/* Scrollable Body */}
-            <div className="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6">
+            <div className="flex-1 overflow-y-auto p-4 sm:p-8 space-y-5 sm:space-y-6">
               {/* Quick Actions Bar */}
               <div className="flex flex-wrap items-center justify-between gap-2 p-3 rounded-xl bg-white border border-[#E8E8E4] shadow-xs text-xs">
                 <div className="flex items-center gap-2">
@@ -226,7 +230,7 @@ export function BudgetDrawer() {
                   className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#111110] text-white font-medium hover:bg-stone-800 transition-colors"
                 >
                   <Download className="w-3.5 h-3.5" />
-                  <span>Export CSV</span>
+                  <span>Export Spreadsheet</span>
                 </button>
               </div>
 

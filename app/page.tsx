@@ -68,7 +68,7 @@ export default function Home() {
       <CategoryTabs />
 
       {/* Main Content Area */}
-      <main id="catalogue" className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="catalogue" className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8">
         {/* Top Priorities Featured Band (shown when browsing all or default) */}
         {isDefaultBrowseAll && store.viewMode === "grid" && <FeaturedPriorities />}
 
@@ -116,10 +116,10 @@ export default function Home() {
                     </button>
                   </div>
 
-                  {/* Cards Grid with Bento layout on first card */}
+                  {/* Cards Grid with clean responsive gap */}
                   <motion.div
                     layout
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
                   >
                     <AnimatePresence mode="popLayout">
                       {displayItems.map((item, index) => (
@@ -161,7 +161,7 @@ export default function Home() {
           /* Filtered Flat Grid */
           <motion.div
             layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
           >
             <AnimatePresence mode="popLayout">
               {filteredItems.map((item, index) => (

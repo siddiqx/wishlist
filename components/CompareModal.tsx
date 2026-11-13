@@ -35,27 +35,27 @@ export function CompareModal() {
         />
 
         {/* Modal Window */}
-        <div className="flex min-h-full items-center justify-center p-4 sm:p-6 text-center">
+        <div className="flex min-h-full items-center justify-center p-2 sm:p-6 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 16 }}
             transition={{ type: "spring", damping: 25, stiffness: 350 }}
-            className="w-full max-w-5xl rounded-3xl bg-[#F7F7F5] border border-[#E8E8E4] text-left shadow-2xl overflow-hidden flex flex-col max-h-[90vh]"
+            className="w-full max-w-5xl rounded-2xl sm:rounded-3xl bg-[#F7F7F5] border border-[#E8E8E4] text-left shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
           >
             {/* Modal Header */}
-            <div className="px-6 py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4 shrink-0">
-              <div className="flex items-center gap-2">
-                <Scale className="w-5 h-5 text-[#4F46E5]" />
-                <h2 className="text-lg font-semibold text-[#111110]">
-                  Side-by-Side Product Comparison
+            <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-3 shrink-0">
+              <div className="flex items-center gap-2 min-w-0">
+                <Scale className="w-5 h-5 text-[#4F46E5] shrink-0" />
+                <h2 className="text-base sm:text-lg font-semibold text-[#111110] truncate">
+                  Side-by-Side Comparison
                 </h2>
-                <span className="text-xs text-[#8A8A80] font-mono">
-                  ({compareItems.length} of 3 items)
+                <span className="text-xs text-[#8A8A80] font-mono shrink-0">
+                  ({compareItems.length}/3)
                 </span>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 shrink-0">
                 {compareItems.length > 0 && (
                   <button
                     onClick={() => store.clearCompare()}
@@ -75,7 +75,7 @@ export function CompareModal() {
             </div>
 
             {/* Content Area */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-6">
+            <div className="flex-1 overflow-y-auto p-3 sm:p-6 space-y-4 sm:space-y-6">
               {compareItems.length === 0 ? (
                 <div className="text-center py-12 text-[#8A8A80] space-y-2">
                   <p className="text-sm">No items selected for comparison.</p>

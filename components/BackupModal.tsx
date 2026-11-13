@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Database, Download, Upload, Copy, Check, AlertTriangle, RotateCcw } from "lucide-react";
+import { X, Settings2, Download, Upload, Copy, Check, AlertTriangle, RotateCcw } from "lucide-react";
 import { useWishlistStore } from "@/lib/store";
 
 export function BackupModal() {
@@ -26,7 +26,7 @@ export function BackupModal() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `siddiq-blueprint-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    link.download = `siddiq-blueprint-export-${new Date().toISOString().slice(0, 10)}.json`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -56,7 +56,7 @@ export function BackupModal() {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6 md:p-12">
+      <div className="fixed inset-0 z-50 overflow-y-auto p-3 sm:p-6 md:p-12">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -76,11 +76,11 @@ export function BackupModal() {
             className="w-full max-w-xl rounded-2xl bg-[#F7F7F5] border border-[#E8E8E4] text-left shadow-2xl overflow-hidden flex flex-col"
           >
             {/* Header */}
-            <div className="px-6 py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4">
+            <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4">
               <div className="flex items-center gap-2">
-                <Database className="w-5 h-5 text-[#4F46E5]" />
+                <Settings2 className="w-5 h-5 text-[#4F46E5]" />
                 <h2 className="text-base font-semibold text-[#111110]">
-                  Data Backup &amp; Portability
+                  Catalogue Preferences &amp; Portability
                 </h2>
               </div>
               <button
@@ -93,14 +93,14 @@ export function BackupModal() {
             </div>
 
             {/* Content */}
-            <div className="p-6 space-y-6 text-xs">
+            <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 text-xs">
               {/* Export Section */}
               <div className="p-4 rounded-xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-[#111110]">Export State (JSON)</h3>
+                    <h3 className="font-semibold text-[#111110]">Export Plan &amp; Settings</h3>
                     <p className="text-[#8A8A80] text-[11px]">
-                      Contains your notes, custom statuses, pinned items, and budget plan.
+                      Export a secure snapshot containing your personal notes, statuses, bookmarks, and budget plan.
                     </p>
                   </div>
                   <div className="flex items-center gap-1.5">
@@ -125,16 +125,16 @@ export function BackupModal() {
               {/* Import Section */}
               <div className="p-4 rounded-xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
                 <div>
-                  <h3 className="font-semibold text-[#111110]">Import &amp; Restore Backup</h3>
+                  <h3 className="font-semibold text-[#111110]">Import Saved Plan</h3>
                   <p className="text-[#8A8A80] text-[11px]">
-                    Paste previously exported JSON to restore your exact custom state.
+                    Paste previously exported configuration to restore your personal notes and customized plan.
                   </p>
                 </div>
 
                 <textarea
                   value={importText}
                   onChange={(e) => setImportText(e.target.value)}
-                  placeholder="Paste JSON here..."
+                  placeholder="Paste your exported configuration here..."
                   rows={4}
                   className="w-full p-2.5 rounded-lg bg-[#F7F7F5] border border-[#E8E8E4] font-mono text-[11px] focus:outline-none focus:ring-1 focus:ring-[#4F46E5] text-[#111110] resize-none"
                 />
@@ -158,7 +158,7 @@ export function BackupModal() {
                     className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#4F46E5] text-white font-medium hover:bg-indigo-700 disabled:opacity-50 transition-colors shadow-xs"
                   >
                     <Upload className="w-3.5 h-3.5" />
-                    <span>Apply Backup</span>
+                    <span>Apply Settings</span>
                   </button>
                 </div>
               </div>
@@ -167,14 +167,14 @@ export function BackupModal() {
               <div className="p-4 rounded-xl bg-[#F1F1EE] border border-[#E8E8E4] flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
                   <AlertTriangle className="w-4 h-4 text-[#D97706] shrink-0" />
-                  <span className="text-[#57574F]">Need to restore original defaults?</span>
+                  <span className="text-[#57574F]">Reset catalogue to initial state?</span>
                 </div>
                 <button
                   onClick={handleReset}
                   className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-[#DC2626] hover:bg-rose-50 font-medium transition-colors"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
-                  <span>Reset All</span>
+                  <span>Reset Catalogue</span>
                 </button>
               </div>
             </div>

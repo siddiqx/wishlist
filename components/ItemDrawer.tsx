@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import confetti from "canvas-confetti";
 import {
@@ -18,7 +19,7 @@ import {
 import { useWishlistStore, getResolvedItem } from "@/lib/store";
 import { INITIAL_WISHLIST_ITEMS, Item } from "@/data/wishlist";
 import { formatPriceRange, formatUSD } from "@/lib/format";
-import { ItemVisual } from "./ItemVisual";
+import { ItemVisual, ASSET_CACHE_KEY } from "./ItemVisual";
 import manifestData from "@/data/image-manifest.json";
 
 interface ItemDrawerContentProps {
@@ -42,13 +43,32 @@ function ItemDrawerContent({
   const [activeTab, setActiveTab] = useState<DrawerTab>("overview");
   const [copiedLink, setCopiedLink] = useState(false);
   const [localNotes, setLocalNotes] = useState(item.notes || "");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const price = formatPriceRange(item.priceUSD.min, item.priceUSD.max, rate);
   const isBought = item.status === "bought";
   const isCompared = store.compareItemIds.includes(item.id);
 
-  const manifestEntry = (manifestData.items as Record<string, { credit?: string }>)[item.id];
-  const photoCredit = manifestEntry?.credit || "Curated Visual";
+  const manifestEntry = (manifestData.items as Record<string, { credit?: string; photographer?: string }>)[item.id];
+  const rawCredit = manifestEntry?.credit || manifestEntry?.photographer || "Curated Photography";
+  const photoCredit = rawCredit.replace(/User Verified Product Photo/gi, "Official Product Photography");
+
+  // Derive images list
+  const imagesList =
+    item.images && item.images.length > 0
+      ? item.images
+      : [`/images/items/${item.id}.webp`];
+  const hasMultipleImages = imagesList.length > 1;
+
+  const handlePrevImage = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : imagesList.length - 1));
+  };
+
+  const handleNextImage = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setCurrentImageIndex((prev) => (prev < imagesList.length - 1 ? prev + 1 : 0));
+  };
 
   // Derive domain from link
   let domain = "";
@@ -89,12 +109,12 @@ function ItemDrawerContent({
   return (
     <div className="flex flex-col h-full bg-[#F7F7F5] overflow-hidden">
       {/* Sticky Top Header with Prev/Next, Title & Close */}
-      <div className="px-6 py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4 shrink-0 z-20">
+      <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-white border-b border-[#E8E8E4] flex items-center justify-between gap-4 shrink-0 z-20">
         <div className="flex items-center gap-1.5">
           <button
             onClick={onPrev}
             className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
-            title="Previous item (Left Arrow)"
+            title="Previous item"
             aria-label="Previous item"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -102,14 +122,11 @@ function ItemDrawerContent({
           <button
             onClick={onNext}
             className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
-            title="Next item (Right Arrow)"
+            title="Next item"
             aria-label="Next item"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
-          <span className="text-xs text-[#8A8A80] font-mono ml-2 hidden sm:inline">
-            &larr; / &rarr; keys
-          </span>
         </div>
 
         {/* Action icons right */}
@@ -140,10 +157,6 @@ function ItemDrawerContent({
             <Layers className="w-4 h-4" />
           </button>
 
-          <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono text-[#8A8A80] bg-[#F1F1EE] border border-[#E8E8E4] rounded">
-            ESC
-          </kbd>
-
           <button
             onClick={onClose}
             className="p-1.5 rounded-lg border border-[#E8E8E4] text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
@@ -155,14 +168,98 @@ function ItemDrawerContent({
       </div>
 
       {/* Drawer Scrollable Content */}
-      <div className="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6">
-        {/* Large 16:10 Hero Image */}
-        <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-white border border-[#E8E8E4] shadow-sm">
-          <ItemVisual item={item} aspectRatio="16/10" priority />
-          {isBought && (
-            <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-[#16A34A] text-white shadow-md flex items-center gap-1.5">
-              <Check className="w-4 h-4" />
-              Acquired
+      <div className="flex-1 overflow-y-auto p-4 sm:p-8 space-y-5 sm:space-y-6">
+        {/* Interactive Image Gallery Carousel */}
+        <div className="space-y-3">
+          <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-white border border-[#E8E8E4] shadow-sm select-none group">
+            <ItemVisual
+              item={item}
+              aspectRatio="16/10"
+              priority
+              overrideSrc={imagesList[currentImageIndex]}
+            />
+            {isBought && (
+              <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-[#16A34A] text-white shadow-md flex items-center gap-1.5 z-10">
+                <Check className="w-4 h-4" />
+                Acquired
+              </div>
+            )}
+
+            {hasMultipleImages && (
+              <>
+                {/* Arrow navigation */}
+                <button
+                  type="button"
+                  onClick={handlePrevImage}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/80 text-white backdrop-blur-md shadow-lg transition-all duration-150 z-10 opacity-90 hover:scale-105"
+                  aria-label="Previous photo"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={handleNextImage}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/80 text-white backdrop-blur-md shadow-lg transition-all duration-150 z-10 opacity-90 hover:scale-105"
+                  aria-label="Next photo"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+
+                {/* Counter Pill */}
+                <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[11px] font-mono font-medium z-10">
+                  {currentImageIndex + 1} / {imagesList.length}
+                </div>
+
+                {/* Slide indicator dots */}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10">
+                  {imagesList.map((_, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCurrentImageIndex(idx);
+                      }}
+                      className={`h-1.5 rounded-full transition-all duration-200 ${
+                        idx === currentImageIndex
+                          ? "w-6 bg-white"
+                          : "w-1.5 bg-white/50 hover:bg-white/80"
+                      }`}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Thumbnail Strip */}
+          {hasMultipleImages && (
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5">
+              {imagesList.map((imgSrc, idx) => {
+                const isActive = idx === currentImageIndex;
+                return (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setCurrentImageIndex(idx)}
+                    className={`relative w-20 aspect-[16/10] shrink-0 rounded-xl overflow-hidden border transition-all duration-150 ${
+                      isActive
+                        ? "border-[#4F46E5] ring-2 ring-[#4F46E5]/40 shadow-sm scale-102"
+                        : "border-[#E8E8E4] opacity-65 hover:opacity-100 hover:border-stone-400"
+                    }`}
+                  >
+                    <Image
+                      src={imgSrc.includes("?") ? `${imgSrc}&${ASSET_CACHE_KEY}` : `${imgSrc}?${ASSET_CACHE_KEY}`}
+                      alt={`${item.name} thumbnail ${idx + 1}`}
+                      fill
+                      unoptimized
+                      sizes="80px"
+                      className="object-cover"
+                    />
+                  </button>
+                );
+              })}
             </div>
           )}
         </div>
@@ -214,16 +311,59 @@ function ItemDrawerContent({
               <div className="p-4 rounded-xl bg-white border border-[#E8E8E4]">
                 <div className="text-[10px] font-semibold uppercase text-[#8A8A80]">Timeline</div>
                 <div className="text-sm font-semibold text-[#111110] mt-0.5 capitalize">
-                  {item.when === "now" ? "Immediate (Core)" : "Future Milestone"}
+                  {item.when === "now" ? "Core Roadmap" : "Future Milestone"}
                 </div>
               </div>
               <div className="p-4 rounded-xl bg-white border border-[#E8E8E4]">
                 <div className="text-[10px] font-semibold uppercase text-[#8A8A80]">Priority</div>
-                <div className="text-sm font-semibold text-[#111110] mt-0.5 capitalize">
-                  {item.priority} Urgency
+                <div className="text-sm font-semibold text-[#111110] mt-0.5 capitalize flex items-center gap-1.5">
+                  <span
+                    className={`w-2 h-2 rounded-full ${
+                      item.priority === "high"
+                        ? "bg-[#DC2626]"
+                        : item.priority === "medium"
+                        ? "bg-[#D97706]"
+                        : "bg-[#8A8A80]"
+                    }`}
+                  />
+                  <span>{item.priority.charAt(0).toUpperCase() + item.priority.slice(1)}</span>
                 </div>
               </div>
             </div>
+
+            {/* Candidate Group Selector for Motorcycles */}
+            {item.candidateGroup === "motorcycle-choice" && (
+              <div className="p-4 rounded-xl bg-white border border-emerald-200/80 shadow-xs text-xs space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5 font-semibold text-[#111110]">
+                    <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                    <span>Motorcycle Selection (1 of 4 Models)</span>
+                  </div>
+                  <span
+                    className={`px-2 py-0.5 rounded text-[10px] font-semibold ${
+                      item.isInPlan ? "bg-emerald-100 text-emerald-800" : "bg-stone-100 text-stone-600"
+                    }`}
+                  >
+                    {item.isInPlan ? "Active in Budget Plan" : "Alternative Model"}
+                  </span>
+                </div>
+                <p className="text-[#57574F] leading-relaxed">
+                  Only one motorcycle is budgeted in your total. Selecting this machine sets it as your active choice and updates your budget seamlessly.
+                </p>
+                {!item.isInPlan ? (
+                  <button
+                    onClick={() => store.toggleInPlan(item.id)}
+                    className="w-full py-2 rounded-lg bg-[#111110] hover:bg-black text-white text-xs font-semibold transition-colors mt-1"
+                  >
+                    Select This Motorcycle for Plan
+                  </button>
+                ) : (
+                  <div className="text-[11px] text-emerald-700 font-medium">
+                    &bull; Currently budgeted as your active motorcycle selection.
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Sub-items / Component Breakdown */}
             {item.subItems && item.subItems.length > 0 && (
@@ -342,7 +482,6 @@ function ItemDrawerContent({
               >
                 Personal Notes &amp; Observations
               </label>
-              <span className="text-[10px] text-[#8A8A80]">Auto-saved to localStorage</span>
             </div>
             <textarea
               id="drawer-notes"
@@ -359,7 +498,7 @@ function ItemDrawerContent({
         <div className="pt-2 flex items-center justify-between text-[11px] text-[#8A8A80]">
           <span className="flex items-center gap-1.5">
             <Camera className="w-3 h-3" />
-            <span>Visual: {photoCredit}</span>
+            <span>{photoCredit}</span>
           </span>
 
           <button
@@ -496,7 +635,7 @@ export function ItemDrawer() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="w-screen max-w-2xl sm:min-w-[720px] bg-[#F7F7F5] border-l border-[#E8E8E4] shadow-2xl flex flex-col h-full overflow-hidden"
+            className="w-full sm:w-[90vw] md:w-[680px] lg:w-[760px] max-w-full bg-[#F7F7F5] border-l border-[#E8E8E4] shadow-2xl flex flex-col h-full overflow-hidden"
           >
             <ItemDrawerContent
               key={item.id}

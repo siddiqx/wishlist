@@ -71,9 +71,13 @@ export function ItemCard({ item, isHero = false }: ItemCardProps) {
       exit={{ opacity: 0, scale: 0.96 }}
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       onClick={() => store.openDetail(item.id)}
-      className={`group relative flex flex-col bg-white rounded-2xl border border-[#E8E8E4] shadow-[0_2px_8px_-2px_rgba(17,17,16,0.05)] hover:shadow-[0_12px_24px_-6px_rgba(17,17,16,0.08)] cursor-pointer overflow-hidden ${
+      className={`group relative flex flex-col bg-white rounded-2xl border ${
+        isHero
+          ? "border-indigo-200/80 shadow-[0_4px_14px_-2px_rgba(79,70,229,0.06)]"
+          : "border-[#E8E8E4] shadow-[0_2px_8px_-2px_rgba(17,17,16,0.05)]"
+      } hover:shadow-[0_12px_24px_-6px_rgba(17,17,16,0.08)] cursor-pointer overflow-hidden ${
         isBought ? "opacity-80 hover:opacity-100" : ""
-      } ${isHero ? "sm:col-span-2 sm:row-span-2" : ""}`}
+      }`}
     >
       {/* 4:3 Image Container with Inner Hairline Border */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F1F1EE] rounded-t-2xl">
@@ -90,8 +94,13 @@ export function ItemCard({ item, isHero = false }: ItemCardProps) {
           </span>
         </div>
 
-        {/* Top-right: Bookmark Button (hover on desktop, always on mobile) */}
-        <div className="absolute top-3 right-3 z-10">
+        {/* Top-right: Bookmark Button & Photos badge */}
+        <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5">
+          {item.images && item.images.length > 1 && (
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-black/60 text-white backdrop-blur-sm shadow-xs">
+              <span>{item.images.length} photos</span>
+            </span>
+          )}
           <button
             onClick={handleBookmarkToggle}
             className={`p-1.5 rounded-full backdrop-blur-sm shadow-xs transition-all duration-150 ${
@@ -126,13 +135,9 @@ export function ItemCard({ item, isHero = false }: ItemCardProps) {
       </div>
 
       {/* Card Body */}
-      <div className="flex flex-col flex-1 p-5">
-        {/* Name (18px semibold) */}
-        <h3
-          className={`font-semibold text-[#111110] group-hover:text-[#4F46E5] transition-colors leading-snug mb-1.5 line-clamp-1 ${
-            isHero ? "text-xl sm:text-2xl" : "text-[17px]"
-          }`}
-        >
+      <div className="flex flex-col flex-1 p-4 sm:p-5">
+        {/* Name (17px semibold) */}
+        <h3 className="font-semibold text-[#111110] group-hover:text-[#4F46E5] transition-colors leading-snug mb-1.5 line-clamp-1 text-[17px]">
           {item.name}
         </h3>
 

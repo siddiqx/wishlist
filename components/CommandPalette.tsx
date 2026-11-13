@@ -7,7 +7,7 @@ import {
   Calculator,
   Kanban,
   Bookmark,
-  Database,
+  Settings2,
   ArrowRight,
 } from "lucide-react";
 import { useWishlistStore } from "@/lib/store";
@@ -77,9 +77,6 @@ export function CommandPalette() {
                 placeholder="Type a command, category, or search an item..."
                 className="w-full border-0 bg-transparent py-4 pl-3 pr-8 text-sm text-[#111110] placeholder:text-[#8A8A80] focus:outline-none"
               />
-              <kbd className="px-1.5 py-0.5 text-[10px] font-mono text-[#8A8A80] bg-[#F1F1EE] border border-[#E8E8E4] rounded shrink-0">
-                ESC
-              </kbd>
             </div>
 
             {/* Suggestions list */}
@@ -145,8 +142,8 @@ export function CommandPalette() {
                       className="w-full flex items-center justify-between px-3 py-2 rounded-xl text-[#57574F] hover:bg-[#F1F1EE] hover:text-[#111110] transition-colors"
                     >
                       <div className="flex items-center gap-2.5">
-                        <Database className="w-4 h-4 text-[#57574F]" />
-                        <span className="font-medium text-[#111110]">Backup &amp; Export Data (JSON / CSV)</span>
+                        <Settings2 className="w-4 h-4 text-[#57574F]" />
+                        <span className="font-medium text-[#111110]">Catalogue Preferences &amp; Export</span>
                       </div>
                     </button>
                   </div>

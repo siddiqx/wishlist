@@ -8,6 +8,7 @@ import { useWishlistStore } from "@/lib/store";
 import { computeCatalogueSummary } from "@/lib/filters";
 import { INITIAL_WISHLIST_ITEMS } from "@/data/wishlist";
 import { AnimatedNumber } from "./AnimatedNumber";
+import { ASSET_CACHE_KEY } from "./ItemVisual";
 
 // Spotlight card helper for cursor tracking effect
 function SpotlightCard({
@@ -90,7 +91,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
             >
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-normal text-[#111110] tracking-tight leading-[1.06]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-normal text-[#111110] tracking-tight leading-[1.06]">
                 The Blueprint
               </h1>
             </motion.div>
@@ -100,7 +101,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="text-base sm:text-lg text-[#57574F] font-normal leading-relaxed max-w-xl"
+              className="text-sm sm:text-lg text-[#57574F] font-normal leading-relaxed max-w-xl"
             >
               An executive personal registry of engineering workstation hardware, touring machines,
               tailored wardrobe, and generational milestones — planned with exact specifications.
@@ -111,11 +112,11 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-wrap items-center gap-3 pt-2"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2"
             >
               <button
                 onClick={scrollToCatalogue}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#111110] text-white text-sm font-medium hover:bg-stone-800 active:scale-[0.97] transition-all duration-150 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#111110] text-white text-sm font-medium hover:bg-stone-800 active:scale-[0.97] transition-all duration-150 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
               >
                 <span>Browse Catalogue</span>
                 <ArrowDown className="w-4 h-4 text-stone-400" />
@@ -123,7 +124,7 @@ export function Hero() {
 
               <button
                 onClick={() => store.setBudgetDrawerOpen(true)}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-[#111110] text-sm font-medium border border-[#E8E8E4] hover:bg-[#F1F1EE] active:scale-[0.97] transition-all duration-150 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-[#111110] text-sm font-medium border border-[#E8E8E4] hover:bg-[#F1F1EE] active:scale-[0.97] transition-all duration-150 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
               >
                 <Calculator className="w-4 h-4 text-[#4F46E5]" />
                 <span>Open Budget Planner</span>
@@ -144,9 +145,10 @@ export function Hero() {
             {/* Collage Card 1: MacBook Pro (Center Top) */}
             <div className="absolute top-2 left-6 w-48 sm:w-56 aspect-[4/3] rounded-2xl overflow-hidden bg-white shadow-[0_12px_24px_-6px_rgba(17,17,16,0.1)] border border-[#E8E8E4] transform -rotate-3 hover:rotate-0 transition-transform duration-300 z-20">
               <Image
-                src="/images/items/macbook-pro-14-m-pro.webp"
+                src={`/images/items/macbook-pro-14-m-pro.webp?${ASSET_CACHE_KEY}`}
                 alt="MacBook Pro"
                 fill
+                unoptimized
                 sizes="250px"
                 className="object-cover"
               />
@@ -158,9 +160,10 @@ export function Hero() {
             {/* Collage Card 2: Interceptor 650 (Right Top) */}
             <div className="absolute top-8 right-2 w-44 sm:w-52 aspect-[4/3] rounded-2xl overflow-hidden bg-white shadow-[0_12px_24px_-6px_rgba(17,17,16,0.1)] border border-[#E8E8E4] transform rotate-4 hover:rotate-0 transition-transform duration-300 z-10">
               <Image
-                src="/images/items/re-interceptor-650.webp"
+                src={`/images/items/re-interceptor-650.webp?${ASSET_CACHE_KEY}`}
                 alt="Interceptor 650"
                 fill
+                unoptimized
                 sizes="250px"
                 className="object-cover"
               />
@@ -172,9 +175,10 @@ export function Hero() {
             {/* Collage Card 3: Alienware Monitor (Bottom Left) */}
             <div className="absolute bottom-2 left-12 w-48 sm:w-56 aspect-[4/3] rounded-2xl overflow-hidden bg-white shadow-[0_12px_24px_-6px_rgba(17,17,16,0.12)] border border-[#E8E8E4] transform rotate-2 hover:rotate-0 transition-transform duration-300 z-30">
               <Image
-                src="/images/items/alienware-aw2725df.webp"
+                src={`/images/items/alienware-aw2725df.webp?${ASSET_CACHE_KEY}`}
                 alt="Alienware 360Hz QD-OLED"
                 fill
+                unoptimized
                 sizes="250px"
                 className="object-cover"
               />
@@ -186,9 +190,10 @@ export function Hero() {
             {/* Collage Card 4: Tissot Powermatic Watch (Bottom Right) */}
             <div className="absolute bottom-6 right-8 w-36 sm:w-44 aspect-square rounded-2xl overflow-hidden bg-white shadow-[0_12px_24px_-6px_rgba(17,17,16,0.1)] border border-[#E8E8E4] transform -rotate-6 hover:rotate-0 transition-transform duration-300 z-20">
               <Image
-                src="/images/items/tissot-gentleman-powermatic.webp"
+                src={`/images/items/tissot-gentleman-powermatic.webp?${ASSET_CACHE_KEY}`}
                 alt="Tissot Gentleman Powermatic"
                 fill
+                unoptimized
                 sizes="200px"
                 className="object-cover"
               />
@@ -204,48 +209,48 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
         >
           {/* Stat 1: Total Items */}
           <SpotlightCard>
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1">
+            <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1">
               Catalogue Items
             </div>
-            <div className="text-2xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums flex items-baseline gap-1.5">
+            <div className="text-xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums flex items-baseline gap-1.5">
               <AnimatedNumber value={summary.totalItems} />
               <span className="text-xs font-normal text-[#8A8A80]">items</span>
             </div>
-            <div className="text-xs text-[#57574F] mt-2">
+            <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
               Across 12 categorized blueprints
             </div>
           </SpotlightCard>
 
           {/* Stat 2: Core One-Time Estimate */}
           <SpotlightCard>
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 flex items-center justify-between">
-              <span>Core One-Time Est.</span>
-              <span className="text-[10px] font-mono text-[#8A8A80]">₹{rate}/$</span>
+            <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 flex items-center justify-between">
+              <span className="truncate">Core One-Time</span>
+              <span className="text-[10px] font-mono text-[#8A8A80] shrink-0 ml-1">₹{rate}/$</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums">
+            <div className="text-xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums">
               ${Math.round(summary.oneTimeUSD.min / 1000)}k&ndash;${Math.round(summary.oneTimeUSD.max / 1000)}k
             </div>
-            <div className="text-xs text-[#57574F] mt-2">
-              Approx. ₹{(summary.oneTimeINR.min / 100000).toFixed(1)}L&ndash;₹{(summary.oneTimeINR.max / 100000).toFixed(1)}L INR
+            <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
+              ₹{(summary.oneTimeINR.min / 100000).toFixed(1)}L&ndash;₹{(summary.oneTimeINR.max / 100000).toFixed(1)}L INR
             </div>
           </SpotlightCard>
 
           {/* Stat 3: Completion Progress Ring */}
           <SpotlightCard>
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 flex items-center justify-between">
+            <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 flex items-center justify-between">
               <span>Acquired</span>
-              <span className="text-xs font-semibold text-[#16A34A] flex items-center gap-1">
+              <span className="text-[11px] sm:text-xs font-semibold text-[#16A34A] flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 {summary.percentageComplete}%
               </span>
             </div>
-            <div className="text-2xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums flex items-baseline gap-1.5">
+            <div className="text-xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums flex items-baseline gap-1.5">
               <AnimatedNumber value={summary.totalAcquired} />
-              <span className="text-sm font-normal text-[#8A8A80]">/ {summary.totalItems} items</span>
+              <span className="text-xs sm:text-sm font-normal text-[#8A8A80]">/ {summary.totalItems}</span>
             </div>
             <div className="w-full h-1.5 bg-[#F1F1EE] rounded-full mt-3 overflow-hidden">
               <div
@@ -257,14 +262,14 @@ export function Hero() {
 
           {/* Stat 4: Monthly Running Cost */}
           <SpotlightCard>
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1">
+            <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 truncate">
               Monthly Running Cost
             </div>
-            <div className="text-2xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums">
+            <div className="text-xl sm:text-3xl font-bold text-[#111110] tracking-tight tabular-nums">
               ${summary.monthlyRecurringUSD.min}&ndash;${summary.monthlyRecurringUSD.max}
-              <span className="text-xs font-normal text-[#8A8A80]"> / mo</span>
+              <span className="text-xs font-normal text-[#8A8A80]">/mo</span>
             </div>
-            <div className="text-xs text-[#57574F] mt-2 truncate">
+            <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
               Grooming, diet, gym, bike &amp; insurance
             </div>
           </SpotlightCard>

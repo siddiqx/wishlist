@@ -1,7 +1,7 @@
 "use client";
 
 import { useWishlistStore } from "@/lib/store";
-import { Database, Calculator, ArrowUp } from "lucide-react";
+import { Settings2, Calculator, ArrowUp } from "lucide-react";
 
 export function Footer() {
   const store = useWishlistStore();
@@ -39,8 +39,8 @@ export function Footer() {
               onClick={() => store.setBackupModalOpen(true)}
               className="hover:text-[#111110] transition-colors flex items-center gap-1.5"
             >
-              <Database className="w-3.5 h-3.5 text-[#57574F]" />
-              <span>Backup / JSON</span>
+              <Settings2 className="w-3.5 h-3.5 text-[#57574F]" />
+              <span>Export &amp; Preferences</span>
             </button>
 
             <button
@@ -56,12 +56,12 @@ export function Footer() {
         {/* Bottom meta row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-[#8A8A80]">
           <div>
-            Built with Next.js App Router, Tailwind CSS, Framer Motion &amp; Zustand. Single-user client-side state.
+            Curated personal catalogue &middot; Updated for 2026 &middot; Private Edition
           </div>
           <div className="flex items-center gap-3">
-            <span>Press <kbd className="font-mono text-[10px] bg-[#F1F1EE] px-1 py-0.5 rounded border border-[#E8E8E4] text-[#111110]">/</kbd> to search</span>
+            <span>The Blueprint</span>
             <span>&middot;</span>
-            <span><kbd className="font-mono text-[10px] bg-[#F1F1EE] px-1 py-0.5 rounded border border-[#E8E8E4] text-[#111110]">⌘K</kbd> Command Menu</span>
+            <span>All Specifications Verified</span>
           </div>
         </div>
       </div>

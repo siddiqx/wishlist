@@ -73,8 +73,13 @@ export interface WishlistState {
   importJSON: (jsonString: string) => { success: boolean; error?: string };
 }
 
-// Initial in-plan items: select all "now" items by default
-const defaultInPlanIds = INITIAL_WISHLIST_ITEMS.filter((i) => i.when === "now").map((i) => i.id);
+// Initial in-plan items: select all "now" items by default, but for candidate groups (like motorcycles) include only the primary choice
+const defaultInPlanIds = INITIAL_WISHLIST_ITEMS.filter((i) => {
+  if (i.when !== "now") return false;
+  // If item is part of candidateGroup 'motorcycle-choice', only include re-interceptor-650 by default
+  if (i.candidateGroup === "motorcycle-choice" && i.id !== "re-interceptor-650") return false;
+  return true;
+}).map((i) => i.id);
 
 export const useWishlistStore = create<WishlistState>()(
   persist(
@@ -122,11 +127,23 @@ export const useWishlistStore = create<WishlistState>()(
         })),
 
       toggleInPlan: (id) =>
-        set((state) => ({
-          inPlanItemIds: state.inPlanItemIds.includes(id)
-            ? state.inPlanItemIds.filter((itemId) => itemId !== id)
-            : [...state.inPlanItemIds, id],
-        })),
+        set((state) => {
+          const isCurrentlyIn = state.inPlanItemIds.includes(id);
+          if (isCurrentlyIn) {
+            return { inPlanItemIds: state.inPlanItemIds.filter((itemId) => itemId !== id) };
+          }
+          // If turning ON an item that belongs to a candidate group (e.g. motorcycles), swap out sibling candidates
+          const targetItem = INITIAL_WISHLIST_ITEMS.find((i) => i.id === id);
+          if (targetItem?.candidateGroup) {
+            const siblingIds = INITIAL_WISHLIST_ITEMS
+              .filter((i) => i.candidateGroup === targetItem.candidateGroup && i.id !== id)
+              .map((i) => i.id);
+            return {
+              inPlanItemIds: [...state.inPlanItemIds.filter((itemId) => !siblingIds.includes(itemId)), id],
+            };
+          }
+          return { inPlanItemIds: [...state.inPlanItemIds, id] };
+        }),
 
       setInPlanBatch: (ids, inPlan) =>
         set((state) => {
@@ -241,7 +258,7 @@ export const useWishlistStore = create<WishlistState>()(
         try {
           const parsed = JSON.parse(jsonString);
           if (!parsed || !parsed.data) {
-            return { success: false, error: "Invalid backup format: missing data key." };
+            return { success: false, error: "Invalid file format: missing catalogue configuration." };
           }
           const { itemNotes, itemStatus, itemPriority, inPlanItemIds, pinnedItemIds, inrRate } =
             parsed.data;
@@ -261,8 +278,20 @@ export const useWishlistStore = create<WishlistState>()(
       },
     }),
     {
-      name: "siddiq_wishlist_storage_v1",
+      name: "the_blueprint_storage_v3",
       storage: createJSONStorage(() => localStorage),
+      onRehydrateStorage: () => (state) => {
+        if (!state) return;
+        // Cleanse any invalid or outdated item IDs from plan & pins
+        const validIds = new Set(INITIAL_WISHLIST_ITEMS.map((i) => i.id));
+        state.inPlanItemIds = state.inPlanItemIds.filter((id) => validIds.has(id));
+        state.pinnedItemIds = state.pinnedItemIds.filter((id) => validIds.has(id));
+
+        // If inPlanItemIds is empty (first load or migration), seed with default
+        if (state.inPlanItemIds.length === 0) {
+          state.inPlanItemIds = defaultInPlanIds;
+        }
+      },
       partialize: (state) => ({
         itemNotes: state.itemNotes,
         itemStatus: state.itemStatus,

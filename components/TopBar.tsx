@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Search, LayoutGrid, List, Kanban, Calculator, Layers, Database, X } from "lucide-react";
+import { Search, LayoutGrid, List, Kanban, Calculator, Layers, Settings2, X } from "lucide-react";
 import { useWishlistStore } from "@/lib/store";
 
 export function TopBar() {
@@ -48,21 +48,21 @@ export function TopBar() {
           : "bg-[#F7F7F5] border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-6">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2 sm:gap-6">
         {/* Wordmark Left */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
             href="#"
-            className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F46E5] rounded-lg"
+            className="group flex items-center gap-2 sm:gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F46E5] rounded-lg"
           >
-            <div className="w-8 h-8 rounded-lg bg-[#111110] text-white flex items-center justify-center font-display text-sm font-semibold tracking-tighter shadow-xs group-hover:bg-[#4F46E5] transition-colors">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#111110] text-white flex items-center justify-center font-display text-xs sm:text-sm font-semibold tracking-tighter shadow-xs group-hover:bg-[#4F46E5] transition-colors shrink-0">
               SB
             </div>
             <div className="flex flex-col items-start leading-none">
-              <span className="font-display text-xl sm:text-2xl font-medium tracking-tight text-[#111110] group-hover:text-stone-700 transition-colors">
+              <span className="font-display text-lg sm:text-2xl font-medium tracking-tight text-[#111110] group-hover:text-stone-700 transition-colors whitespace-nowrap">
                 The Blueprint
               </span>
-              <span className="text-[10px] tracking-wider uppercase font-medium text-[#8A8A80] mt-0.5">
+              <span className="text-[10px] tracking-wider uppercase font-medium text-[#8A8A80] mt-0.5 hidden sm:block">
                 Siddiq&apos;s Registry
               </span>
             </div>
@@ -87,7 +87,7 @@ export function TopBar() {
               placeholder="Search gear, specs, brand, or notes... (Press /)"
               className="w-full pl-9 pr-9 py-2 text-sm bg-white border border-[#E8E8E4] rounded-xl placeholder:text-[#8A8A80] text-[#111110] focus:outline-none focus:ring-2 focus:ring-[#4F46E5]/20 focus:border-[#4F46E5] transition-all shadow-xs"
             />
-            {store.searchQuery ? (
+            {store.searchQuery && (
               <button
                 onClick={() => store.setSearchQuery("")}
                 className="absolute right-3 p-0.5 text-[#8A8A80] hover:text-[#111110] rounded-full"
@@ -95,10 +95,6 @@ export function TopBar() {
               >
                 <X className="w-3.5 h-3.5" />
               </button>
-            ) : (
-              <kbd className="absolute right-3 px-1.5 py-0.5 text-[10px] font-mono text-[#8A8A80] bg-[#F1F1EE] border border-[#E8E8E4] rounded pointer-events-none select-none">
-                /
-              </kbd>
             )}
           </div>
         </div>
@@ -158,11 +154,14 @@ export function TopBar() {
           {store.compareItemIds.length > 0 && (
             <button
               onClick={() => store.setCompareModalOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#EEF0FF] border border-indigo-200 text-[#4F46E5] hover:bg-indigo-100 text-xs font-semibold transition-all animate-pulse"
+              className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-xl bg-[#EEF0FF] border border-indigo-200 text-[#4F46E5] hover:bg-indigo-100 text-xs font-semibold transition-all animate-pulse shrink-0"
               title="Compare selected items"
             >
-              <Layers className="w-3.5 h-3.5" />
-              <span>Compare ({store.compareItemIds.length})</span>
+              <Layers className="w-3.5 h-3.5 shrink-0" />
+              <span>
+                <span className="hidden sm:inline">Compare </span>
+                <span>({store.compareItemIds.length})</span>
+              </span>
             </button>
           )}
 
@@ -178,14 +177,14 @@ export function TopBar() {
             </span>
           </button>
 
-          {/* Backup Menu Button */}
+          {/* Preferences & Export Menu Button */}
           <button
             onClick={() => store.setBackupModalOpen(true)}
             className="p-2 rounded-xl text-[#57574F] hover:text-[#111110] hover:bg-[#F1F1EE] transition-colors"
-            title="Backup & Export JSON/CSV"
-            aria-label="Backup & Export"
+            title="Export &amp; Preferences"
+            aria-label="Export &amp; Preferences"
           >
-            <Database className="w-4 h-4" />
+            <Settings2 className="w-4 h-4" />
           </button>
         </div>
       </div>

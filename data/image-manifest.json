@@ -1,23 +1,5 @@
 {
   "items": {
-    "gaming-pc-opt-a-sweetspot": {
-      "localPath": "/images/items/gaming-pc-opt-a-sweetspot.webp",
-      "sourceUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&q=80",
-      "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAABwAQCdASoQAAsABUB8JZwC7AFAAAD+7t5MtruIwD57GuyW/5Q1HIZH0igMRfSMAAA=",
-      "credit": "Curated Product Photography",
-      "width": 1200,
-      "height": 900
-    },
-    "gaming-pc-opt-b-bundle": {
-      "localPath": "/images/items/gaming-pc-opt-b-bundle.webp",
-      "sourceUrl": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&q=80",
-      "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoQABgAPzmGulQvKSWjMAgB4CcJZgCdINiDA09lPKWndOV2cWYAAP7r01Pt3yV29KTAeZe8T6vvEol5WU2xjzv5JFRytaoQcG/CfFjSu9ZeWqm9deJdhQFdWZmEeh2aUebUEXxSZdtq0mnHGPK5u7EUMJtH9tHrjKoK8n9oiG4AAA==",
-      "credit": "Curated Product Photography",
-      "width": 1200,
-      "height": 900
-    },
     "gaming-pc-ryzen-9800x3d": {
       "localPath": "/images/items/gaming-pc-ryzen-9800x3d.webp",
       "sourceUrl": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2900400-ryzen-7-9800x3d.jpg",
@@ -40,10 +22,12 @@
       "localPath": "/images/items/gaming-pc-ssd-2tb-990pro.webp",
       "sourceUrl": "https://images.samsung.com/is/image/samsung/p6pim/in/mz-v9p2t0bw/gallery/in-990pro-nvme-m2-ssd-mz-v9p2t0bw-534630688?$1164_776_PNG$",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4WAoAAAAQAAAADwAACgAAQUxQSEkAAAABd6AokqTmcj4DfPHvjj82IiLgv9N0nQJpycAokq1GhGNGAk6QgA1u+EDBx0qWgKe0KyGi/xOAfndlT3SZo4yXebDMZwCAQNHvAFZQOCAuAAAAsAEAnQEqEAALAAVAfCWkAALqdlpoAAD+6MmM6lunrr9o802cIq7/XP+AqAAAAA==",
+      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQABAABUB8JZwAAtzhJzgrAAD+563KC919R1DVj5GO+Lf8jpqMCv77r+YlHWgvw45ugw4oAAA=",
       "credit": "Samsung Electronics Official",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "gaming-pc-ssd-2tb-990pro",
+      "photographer": "User Verified Product Photo"
     },
     "gaming-pc-ram-ddr5-32gb": {
       "localPath": "/images/items/gaming-pc-ram-ddr5-32gb.webp",
@@ -56,21 +40,25 @@
     },
     "alienware-aw2725df": {
       "localPath": "/images/items/alienware-aw2725df.webp",
-      "sourceUrl": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw2725df/media-gallery/monitor-alienware-2725df-black-gallery-1.psd?fmt=jpg&wid=1200",
+      "sourceUrl": "https://i.rtings.com/assets/products/2vl7SnXp/dell-alienware-aw2725df/design-large.jpg",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQABAABUB8JZACdADadrefgAD+mqsZO+WU35Afk2lyETMfsFPnnCgWIE7L2lMkVao6F1COL2EvUCleEW4PF0mw2u3Kmc3Sr/QBrUO7JCd1RMeAAAA=",
-      "credit": "Dell Alienware Official",
+      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQABAABUB8JZQATgA2NkGsrAAA/vHJ8V7psqGqdf1TBvnMWFO/u8u9w59oRL9a9M8ow2/Lj4U03tx/YRPn9UeAuPaJxXPZDCAAAA==",
+      "credit": "RTINGS Laboratory Display Photography",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "alienware-aw2725df",
+      "photographer": "User Verified Product Photo"
     },
     "secretlab-titan-evo": {
       "localPath": "/images/items/secretlab-titan-evo.webp",
       "sourceUrl": "https://images.secretlab.co/theme/common/collections-v2-TITAN-Evo-hero.jpg",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAABwAQCdASoQAAcABUB8JYgC7AFAAAD+7Nn7mm7f98etCLnisVBg6l1Hr22R9vwpEAA=",
+      "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoQABAABUB8JZwAAlxbOYoAAP7w2tbWBI4RFEEDjcB1YAAA",
       "credit": "Secretlab Official",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "secretlab-titan-evo",
+      "photographer": "User Verified Product Photo"
     },
     "gaming-pc-mobo-x870": {
       "localPath": "/images/items/gaming-pc-mobo-x870.webp",
@@ -126,24 +114,6 @@
       "width": 1200,
       "height": 900
     },
-    "shure-mv7-plus": {
-      "localPath": "/images/items/shure-mv7-plus.webp",
-      "sourceUrl": "https://products.shureweb.eu/cdn-cgi/image/width=1380,height=1380,format=auto/shure_product_db/product_images/files/b52/dda/ab-/original/780ff1532e5f3cb758123e44cec7768b.webp",
-      "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSJYAAAABgCNb27LmfjJQW8fQuWyGodcFQGsddA5bsJbeSkmygawik86Tj9//NUTEBOAVHF8JrZnsUeHWB7QIkrTHyyFS+Ali1ySXdpSg8on03brHEX6Vc/fN+rF6aI8i92E9jLGqKECQuFh//8bqIAFB8sUy5t/aIAA0Y+v7/2GNkHgVdctY7zUEwRNzyqAIKVIRJGElQhJeEBJWUDggOgAAAJABAJ0BKhAAEAAFQHwlpAACEN3wAAD+40o/gDu74QMezLnUvegGap3tMuITknTytH0Cw2PYBIgAAAA=",
-      "credit": "Shure Official",
-      "width": 1200,
-      "height": 900
-    },
-    "dell-u2723qe-monitor": {
-      "localPath": "/images/items/dell-u2723qe-monitor.webp",
-      "sourceUrl": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/u-series/u2723qe/media-gallery/monitor-u2723qe-gallery-1.psd?fmt=jpg&wid=1200",
-      "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRjwBAABXRUJQVlA4WAoAAAAQAAAADwAADgAAQUxQSLMAAAABuS5E9D8UbmtrU5SZwd3SDbEOqIAOiGiEBijFiyAmX3Jyd5d/AjuHDr7ZjZgAhW3bIO0Y/9j+2tjbCcMgvLi5cnAnGUmMhV8vUT4GhJGU5QQXprgyMM6IJf2cpcapTDBgXf2TERJxal34YSSAxHGBYNzVjiBtwX39kJeKqjmQj+ALey34IQLaBjoOOEkVXxjE5ZzEpDXt/Kw8qfsgnq4aj6/n6WxmSs0QZqkvIe6FAOoRAABWUDggYgAAAPABAJ0BKhAADwAFQHwlsAJ0ANxArZBRWAD+3NcIiAJVKi4NXBcgs/2OM8riP38FA3BocxDitrH7xcLH5zAQHpDT7hGs4wjAr0XNk+5Zl+bM3m6Lq9eX2REw1l3hUbbCcAAA",
-      "credit": "Dell UltraSharp Official",
-      "width": 1200,
-      "height": 900
-    },
     "macbook-pro-14-m-pro": {
       "localPath": "/images/items/macbook-pro-14-m-pro.webp",
       "sourceUrl": "https://www.apple.com/v/macbook-pro/b/images/meta/mbp_splitter__c9bpyxdvy6eu_og.png?202611121140",
@@ -157,10 +127,12 @@
       "localPath": "/images/items/daikin-inverter-ac.webp",
       "sourceUrl": "https://daikinindia.com/sites/default/files/inline-images/JTKJ35XV16VAA+RKJ35XV16VAA.jpg",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoQAAkABUB8JZQAAuorpgAA/mZFtcAG1Gj5zd4Xi18yTl3VsAA=",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAABUB8JZQAD4iqU5zrOgAA/rMudB8q+babqjFv5/fFzMFkjvsgV0kMmQrAZarvVEoV4ss6CqFGLXnL1eAA",
       "credit": "Daikin India Official",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "daikin-inverter-ac",
+      "photographer": "User Verified Product Photo"
     },
     "lg-dualup-28": {
       "localPath": "/images/items/lg-dualup-28.webp",
@@ -211,10 +183,12 @@
       "localPath": "/images/items/caldigit-ts4-dock-kit.webp",
       "sourceUrl": "https://www.caldigit.com/wp-content/uploads/elementor/thumbs/TS4_Vertical-Right-Front-View_White-BG_Version-05-pk1fejiico67gdmehpu3r291s56bu8zot09mk1lmyw.jpg",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAABUB8JaQAAq4KpxTfwAD+8d3p4DE1Al2p+uPx1dz0nOoWRFLnemKZAAAA",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQABAABUB8JZwAAuJ+AF8gAP7vRzZabxflLzOWNZflHwJ4codIXnBwPk+Hl6oU9CAGaY9V1GeGGwiluj+qpdiuTcLG4KAA",
       "credit": "CalDigit Official",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "caldigit-ts4-dock-kit",
+      "photographer": "User Verified Product Photo"
     },
     "raymond-mtm-navy-blazer": {
       "localPath": "/images/items/raymond-mtm-navy-blazer.webp",
@@ -272,10 +246,10 @@
     },
     "re-interceptor-650": {
       "localPath": "/images/items/re-interceptor-650.webp",
-      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Royal_Enfield_650_Interceptor.jpg",
+      "sourceUrl": "https://static-cdn.team-bhp.com/prod/new-bike-cms/Royal-Enfield/Interceptor-650/2025/01/01/2d6002b0-fab0-4040-bc4f-8485e13ad8a0-Royal-Enfield_Interceptor-650_Front-View_Ride-Aesthetics_Brand-Image.jpg",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAQCdASoQAA0ABUB8JYwAAdKkeAAA/snJIjiEE4ZHVjvN4ZJdFWUywRiJHdH2R5BJJDoZmJqBvBstW6I9TFdXUO87a5VcH+rEGhH+R/Ar22PAC8AQAA==",
-      "credit": "Royal Enfield / Wikimedia Commons",
+      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAkABUB8JaQAAuZXN2wAAP6bY0i0ACBVJe0641Fx2HaGuhOMGhgATv5hdYIAAAA=",
+      "credit": "Royal Enfield / Team-BHP Studio",
       "width": 1200,
       "height": 900
     },
@@ -284,7 +258,7 @@
       "sourceUrl": "https://static-cdn.team-bhp.com/prod/new-bike-cms/Royal-Enfield/Himalayan-450/2025/01/02/b6fe62a6-6a4b-4c32-a65a-b39067f72d93-Royal-Enfield_Himalayan-450_Right-Hand-View_Ride-Aesthetics_Brand-Image.jpg",
       "status": "downloaded",
       "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAkABUB8JZwAAn+++P/gAP7wOFdLGoCnHC/UA0w02EFp2pP7PTyKfvgnbfApgYu5tbdtwb04VSU4EAA=",
-      "credit": "Royal Enfield Media / Team-BHP",
+      "credit": "Royal Enfield / Team-BHP Press",
       "width": 1200,
       "height": 900
     },
@@ -364,19 +338,23 @@
       "localPath": "/images/items/meal-prep-kitchen-arsenal.webp",
       "sourceUrl": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoQAAsABUB8JZgCdAEQ49Fi/6BSAAD+xeFG8X/NdrUcH1UiRIr+wd+o/1ePflc/IUF45IAhl82N6uaXlMDLQkGZpeQ+dxfQZPbZ5kkAAAA=",
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQABAABUB8JbACdADJ4TIfsMgAAP6Um+2fnVZ4FAyaFuaz6/8OeYTEcVR7i+GiWI8sYMe1ZBLfd8j/S1dOMxsFmdVBZK28Wi7GjoDIuwDm8AAA",
       "credit": "Curated Product Photography",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "meal-prep-kitchen-arsenal",
+      "photographer": "User Verified Product Photo"
     },
     "philips-oneblade": {
       "localPath": "/images/items/philips-oneblade.webp",
       "sourceUrl": "https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=1200&q=80",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAsABUB8JQBOgB9XtYdAAP0drkOSUMZAlcpX1YB9rw9p+aBExjcyLS9ZtRcSG9gFgAAA",
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQABAABUB8JbACw7D0WEvGNvCx4AD+3t7a698Ez6DsB6nppRAI90NYJettbQREYCK+Gz1Ns7mc/dZPVwXzG+a45Yl59ksEwAA=",
       "credit": "Curated Product Photography",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "philips-oneblade",
+      "photographer": "User Verified Product Photo"
     },
     "gym-membership": {
       "localPath": "/images/items/gym-membership.webp",
@@ -391,19 +369,23 @@
       "localPath": "/images/items/orthopedic-mattress.webp",
       "sourceUrl": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAsABUB8JQBdgBwstLEpiogA/o+27Qo0DkZu6YPYn8P3QwcJdvJfDMncvzqPFE48uxPweByWOBl5KuYAAA==",
+      "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQABAABUB8JYgCdAEOe/vRwAD9zueunUcSYWt8I6kApjvE/kgIaDKVgG4HSnTKTbgpIi7zCoAAAA==",
       "credit": "Curated Product Photography",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "orthopedic-mattress",
+      "photographer": "User Verified Product Photo"
     },
     "daily-supplements-stack": {
       "localPath": "/images/items/daily-supplements-stack.webp",
       "sourceUrl": "http://www.optimumnutrition.co.in/cdn/shop/files/brand_logo.jpg?v=1744639153",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAcABUB8JaQAAu0cAmogAP7KO3y/vMrqk+SlDjDvPjsO3j90s2syqlKfoRTAAAA=",
+      "blurDataURL": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSE4AAAABcBMAANKQQS8+LeGF3OXldALYJ5FgksRxCBAREwBsK/pxZDMLsPckOke//l74DPp8Tw7QVPieDaa6uXKqn6uuyp/Tp2CpaNq2KSRwaiVWUDggTAAAANABAJ0BKhAAEAAFQHwlAABbWmpbK4EAAP7Y9/1WpD7loGIiTkmbNdaiiNI9yoMfg330P3SQ2ijlhafDJz4ubzfZ2cCV+8oHc7IAAAA=",
       "credit": "Curated Product Photography",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "daily-supplements-stack",
+      "photographer": "User Verified Product Photo"
     },
     "garmin-forerunner-265": {
       "localPath": "/images/items/garmin-forerunner-265.webp",
@@ -454,10 +436,12 @@
       "localPath": "/images/items/health-term-insurance.webp",
       "sourceUrl": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
       "status": "downloaded",
-      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoQAAsABUB8JaQAAudlKnyXoAD+9DCHN3HR8YNuOT83yhzpOaEyuHAA",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAgCdASoQABAABUB8JaACdAauYXUHlUZxrx4AAP38puLm1NzpKblanoO/xUdLOy1yzOyZJP34v2Zo1LoSHsKkPadThNHdvpQAAA==",
       "credit": "Curated Product Photography",
       "width": 1200,
-      "height": 900
+      "height": 900,
+      "id": "health-term-insurance",
+      "photographer": "User Verified Product Photo"
     },
     "college-fees-balance": {
       "localPath": "/images/items/college-fees-balance.webp",
@@ -638,6 +622,391 @@
       "credit": "Chanel Parfums / Sephora",
       "width": 1200,
       "height": 900
+    },
+    "ktm-390-duke": {
+      "localPath": "/images/items/ktm-390-duke.webp",
+      "sourceUrl": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/220872/390-duke-right-side-view-3.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4WAoAAAAQAAAADwAACAAAQUxQSHkAAAABgFvbtmplnXe/u1sBXoG7GyEp45fAj/CIEqAOd00pQGOINHeHGiJiAgBEQPinCEoRNf8huAMQWEij/RAiEydTw8eXUwfCz3xtdPX29nY3pgFoVHZub54+9s+uh2igGN8/Xlte6q1sLyIgOEeTDoTmXOoHCCidTvErAFZQOCA6AAAAkAEAnQEqEAAJAAVAfCWcAAKRwZRAAP7o8/ArJ5IgZtwMZz5RWhHrLQH0ou3FBcrg6xM2MWEz4eAAAA==",
+      "credit": "KTM / BikeWale Studio",
+      "width": 1200,
+      "height": 900
+    },
+    "motorcycle-jacket-rynox-storm-evo": {
+      "localPath": "/images/items/motorcycle-jacket-rynox-storm-evo.webp",
+      "sourceUrl": "https://motocentral.in/cdn/shop/products/RynoxStormEvoJacketBlackSandBrown1.jpg?v=1620223422",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwAwCdASoQABIAPzmEuVOvKKWisAgB4CcJaQAAUYH5K5G93QAA/uqVo39QtOtbLyOyNZqBS1VwBQRBWKjMtXUYQfsjCPnI9yLqnajS3ltP0LRQW/TFh3RDWAk+Up3VAAAAAA==",
+      "credit": "Rynox Gears Official",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-cooler-arctic-360": {
+      "localPath": "/images/items/gaming-pc-cooler-arctic-360.webp",
+      "sourceUrl": "https://www.arctic.de/media/9d/26/30/1725369416/Liquid_Freezer_III_360_Black_G01_eha_3_awards.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRiABAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSKQAAAANgFtt2/Lkfr8/7q6VywrpMkF2SSloR+kyA7s4lBwqd3e+uE4QERPA9CtaPa1Bmr6iBLTGXDA/vn3//GjdApFWake5TR9fn0+vN2/J5V2lwLD7PV6/O+KgXHvVIi1aoPj/cIeX6hU+bbx5n9Zfz0Mzr9X3AodJ71nuehW+F0uHgBLAAPl7voDTj9/PP+ePIbQQabXWt7l844TeVguE/i36twYMBlZQOCBWAAAA8AEAnQEqEAAQAAVAfCWMAAL2mzhzBsAAAP7pK6nyCdqqUtQW2OwdqMrdW6ndbpbsYMs3wkeba1KO4Pqk42/0CqwvfQCLnCIK91juAnpyaPe4ABxAAAA=",
+      "credit": "Arctic Cooling Official",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-case-lancool-216": {
+      "localPath": "/images/items/gaming-pc-case-lancool-216.webp",
+      "sourceUrl": "https://lian-li.com/wp-content/uploads/2022/11/1007_136-b.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAABUB8JaQAAqFlFVpifr6AAP7wQfPrY+C3+nzTY695hHpyPYVGsYyFioj4i9OfjiGioELD/jl0vbZOPvXZeR9l8ngwjuQAAA==",
+      "credit": "Lian Li Official",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-psu-corsair-850w": {
+      "localPath": "/images/items/gaming-pc-psu-corsair-850w.webp",
+      "sourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/rme-series-2025/Gallery/CP-9020296-NA_01.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSKQAAAABgJtt27Hn+f1X/v8pFFcsjRmcdOpS2WnTGlM4bRYwBrD14grfGSJiAkTC1UNTExNjY6MjQxN5aVm+5H/FnNxgrVKff76yIodo/tfsyKaT4TS0gHKw3KeHnOCtqB3t8KxprMHVaHpyn9j/UEwmHxzelGEjdIL55/nNsC87aMBaozSWK1nlTWnDb3t3MCfTKMBc7c/3lCc8IpmpwYHe1rKIR357AVZQOCAyAAAA0AEAnQEqEAAQAAVAfCWkAAI06mKtRgAA/sxhsF6PpHeij1BWKwUlR4DEFOBbOG0AAAA=",
+      "credit": "Corsair Official",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-windows-build-kit": {
+      "localPath": "/images/items/gaming-pc-windows-build-kit.webp",
+      "sourceUrl": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/PT_RGB_Windows11_Home_EN_1555x1555-1?qlt=90&hei=1200&wid=1200&bgc=FFFFFFFF&fmt=jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABwAgCdASoQABAABUB8JbACdEf/gfLYavRzly4AAP7T65syEod2mdnEziPENtSXYX65gYEQVQOpmfwXaFHLi2msz0rWL9+tU+6sJSYbCgYiEugrNxz7IEIAAAA=",
+      "credit": "Microsoft Corporation Official",
+      "width": 1200,
+      "height": 900
+    },
+    "keychron-q1-pro": {
+      "localPath": "/images/items/keychron-q1-pro.webp",
+      "sourceUrl": "https://www.keychron.com/cdn/shop/products/Keychron-Q1-Pro-QMK-VIA-wireless-custom-mechanical-keyboard-knob-75_-layout-full-aluminum-black-frame-for-Mac-Windows-Linux-barebone.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAABwAQCdASoQABAABUB8JYwCdAFAAAD+7wkN/fT1iAMMrAC4+MuCSX7o2Jz+qyAA",
+      "credit": "Keychron Official",
+      "width": 1200,
+      "height": 900,
+      "id": "keychron-q1-pro",
+      "photographer": "User Verified Product Photo"
+    },
+    "logitech-mx-master-3s": {
+      "localPath": "/images/items/logitech-mx-master-3s.webp",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3s/2025-update/mx-master-3s-bluetooth-edition-top-view-graphite-new-1.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRgoBAABXRUJQVlA4WAoAAAAQAAAADwAADQAAQUxQSJAAAAABgFtt27LmeT+c1qHjsIAtwAQwhLbuFvcqVUpPBtA50qXNCC6/PcUvM0TEBMCrwFWQO+xUonD3Y0yNr3kopwA2+KOzDr+TH6fUNfZdBLV3WhrnCNh8qNKyqPMEfpsfW/wnDd5B2RTOqdueIU5X/LNo8N6t/EZT++MefDYIEmeaxZcsxAFKUBi1YxC4igIgAgBWUDggVAAAABACAJ0BKhAADgAFQHwllAAC5D6v/6bpCAAA/svUpOmU+kCgL1P06cO+yBjjs4UZmo+mYy1BqSVG6mt05J1846Sf6Y3u6auDEzPdPk2AAIJgAH8AAA==",
+      "credit": "Logitech Official",
+      "width": 1200,
+      "height": 900
+    },
+    "kindle-paperwhite": {
+      "localPath": "/images/items/kindle-paperwhite.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/2023_Amazon_Kindle_Paperwhite_%281%29.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsABUB8JZQAAudh+2SbiwAA/sljQxeFoC/06vMMpqTdKxZ4sXgWhaIvTKDs+ZHzy6v8gXLphYK5tJJGQRnrahAAAA==",
+      "credit": "Amazon / Wikimedia Commons",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-cpu-ryzen": {
+      "id": "gaming-pc-cpu-ryzen",
+      "name": "AMD Ryzen 7 9800X3D (8C/16T, 3D V-Cache)",
+      "category": "gaming-pc",
+      "sourceUrl": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2900400-ryzen-7-9800x3d.jpg",
+      "localPath": "/images/items/gaming-pc-cpu-ryzen.webp",
+      "status": "downloaded",
+      "photographer": "AMD"
+    },
+    "gaming-pc-gpu-rtx": {
+      "id": "gaming-pc-gpu-rtx",
+      "name": "NVIDIA GeForce RTX 5070 Ti 16GB GDDR7",
+      "category": "gaming-pc",
+      "sourceUrl": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/geforce-rtx-50series-og-1200x630.jpg",
+      "localPath": "/images/items/gaming-pc-gpu-rtx.webp",
+      "status": "downloaded",
+      "photographer": "NVIDIA"
+    },
+    "desk-mat-qck-heavy": {
+      "id": "desk-mat-qck-heavy",
+      "name": "SteelSeries QcK Heavy / Artisan Large Cloth Desk Mat (90×40cm)",
+      "category": "gaming-room",
+      "sourceUrl": "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/desk-mat-qck-heavy.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoQABAABUB8JQAAXNeKWlSQAP7ufuOSYj5WpOiX1yH304mkAAA=",
+      "photographer": "User Verified Product Photo"
+    },
+    "edifier-r1700bt-speakers": {
+      "id": "edifier-r1700bt-speakers",
+      "name": "Edifier R1700BT 2.0 Bluetooth Active Bookshelf Speakers",
+      "category": "gaming-room",
+      "sourceUrl": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/edifier-r1700bt-speakers.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQABAABUB8JbACdAD8dJhnopMlIAD+2s6TwXbWnwBN2I9tpr0h2iIdDTzWOKk09DWl6XY0GhSxXl9/uvXlsqX5xNoAAA==",
+      "photographer": "Edifier"
+    },
+    "gaming-room-lighting-acoustics": {
+      "id": "gaming-room-lighting-acoustics",
+      "name": "Govee / Philips Hue Smart Light Strips & Studio Acoustic Panels",
+      "category": "gaming-room",
+      "sourceUrl": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/gaming-room-lighting-acoustics.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQABAABUB8JbACdAEO/Ij70cAA/vDJ25JdLoZ24NW86xXCikHEERV/hJqgDXm+L3rOj9SdBDWeFrMAAAA=",
+      "photographer": "User Verified Product Photo"
+    },
+    "cable-management-suite": {
+      "id": "cable-management-suite",
+      "name": "Under-Desk Cable Management Raceway Tray & Aluminum Headphone Mount",
+      "category": "gaming-room",
+      "sourceUrl": "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/cable-management-suite.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQABAABUB8JYwC7AC9U3GPAADyNV388ZusmOjPXuybYFdFPpIEbr6C2BI49ewaVbDEi3LjPhMEpMxeInheEFa+zjmRup6QAAA=",
+      "photographer": "User Verified Product Photo"
+    },
+    "power-backup-apc-1100va": {
+      "id": "power-backup-apc-1100va",
+      "name": "APC Back-UPS Pro 1100VA / 660W Line-Interactive UPS",
+      "category": "dev-setup",
+      "sourceUrl": "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/power-backup-apc-1100va.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQABAABUB8JaQAAvZ4jg4MgAD+yqgwShgyEG6S37LgksVNs4HbNgrMy5DGHQvdwIj19JcoaN1wAA==",
+      "photographer": "User Verified Product Photo"
+    },
+    "tp-link-archer-ax55": {
+      "id": "tp-link-archer-ax55",
+      "name": "TP-Link Archer AX55 Wi-Fi 6 Gigabit Router & Broadband Setup",
+      "category": "dev-setup",
+      "sourceUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/tp-link-archer-ax55.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAQCdASoQABAABUB8JaQAAuda7eUEaAD+7/wJQnrIBqsnng2KhaAinyxTDVQROtFiJwI66ETKeRrRdFDz3Z8gpQt7HgqpffxOWvf8/nHHeIDwA46F85419crkAAAA",
+      "photographer": "User Verified Product Photo"
+    },
+    "fabindia-kurtas-pack": {
+      "id": "fabindia-kurtas-pack",
+      "name": "Fabindia Hand-Woven Pure Linen & Cotton Kurtas (3-Pack)",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/fabindia-kurtas-pack.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoQABAABUB8JaQAAsfy3SAAAP7x4KoMk2dxpHHDMUcyiSK59fKXtRI5hAAAAA==",
+      "photographer": "User Verified Product Photo"
+    },
+    "grey-flannel-trousers": {
+      "id": "grey-flannel-trousers",
+      "name": "Tailored Grey Flannel Pleated Trousers",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/grey-flannel-trousers.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQABAABUB8JYwCw7DQaZZMAAD+2BNbWyLZhr2JYARrjItbCabjUUG0E3vSQisvNhus1zcwx7Ghpcd+joCCD+L3uiq40DzErgFgAA==",
+      "photographer": "Raymond MTM"
+    },
+    "oxford-shirts-pack": {
+      "id": "oxford-shirts-pack",
+      "name": "Classic Oxford Cotton Button-Down (OCBD) Shirts (3-Pack)",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/oxford-shirts-pack.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQABAABUB8JYwC7ADP0Bd+g6sgAP7D8m0RlRkH6pJwBaGNdvQIezLIj0H3tWn8bkZb8REM9PYuMLLKVviGAAAA",
+      "photographer": "Uniqlo / M&S"
+    },
+    "pique-polos-pack": {
+      "id": "pique-polos-pack",
+      "name": "Premium Piqué Cotton Polos (3-Pack)",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/pique-polos-pack.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoQABAABUB8JaQAApwAZoOXgAD+OwQJsV4TSVXaRTwVTbUhDcfsBiS17TBDz8Bg/B4uwiAA",
+      "photographer": "Lacoste / Ralph Lauren"
+    },
+    "cotton-chinos-pack": {
+      "id": "cotton-chinos-pack",
+      "name": "Slim-Straight Cotton Chinos (3-Pack)",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/cotton-chinos-pack.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQABAABUB8JZQCdADF1dMAAP7Tn7+BJYG+1PAJ7W7HkblaxnngSojjQ2hWAV5knystkBs/xdOQ2pAwXkgAAA==",
+      "photographer": "User Verified Product Photo"
+    },
+    "minimal-white-sneakers": {
+      "id": "minimal-white-sneakers",
+      "name": "Minimalist White Leather Sneakers",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/minimal-white-sneakers.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwAgCdASoQABAABUB8JbACdAywTmJNYu5ZQAD7GxqW0f2rcXkelBagKMkJ+vRIyo5GWS7oEniVzN4RJ1Hk9FK4VMciobG0hFLlFGaUQTAYg90QTPnVpGAaG7sLzVtSfsN+AAAA",
+      "photographer": "Adidas Stan Smith Lux / Veja"
+    },
+    "clarks-desert-boots": {
+      "id": "clarks-desert-boots",
+      "name": "Clarks Original Desert Boots (Sand Suede)",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/clarks-desert-boots.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQABAABUB8JYgCdAEOJsRnaQAAAP7jyJSb6ypVH9kKPGlwHjnjrtzXkf+ee2hfdeoJ/PxBObyX7Qd3gAA=",
+      "photographer": "Clarks Originals"
+    },
+    "shoe-care-suite": {
+      "id": "shoe-care-suite",
+      "name": "Luxury Shoe Care Kit & Aromatic Cedar Shoe Trees",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/shoe-care-suite.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwAgCdASoQABAABUB8JbACdAywTmJNYu5ZQAD7GxqW0f2rcXkelBagKMkJ+vRIyo5GWS7oEniVzN4RJ1Hk9FK4VMciobG0hFLlFGaUQTAYg90QTPnVpGAaG7sLzVtSfsN+AAAA",
+      "photographer": "Saphir & Hanger Project"
+    },
+    "leather-belts-pack": {
+      "id": "leather-belts-pack",
+      "name": "Full-Grain Vegetable-Tanned Leather Belts (2-Pack)",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/leather-belts-pack.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQABAABUB8JQBYeDmAxSYTDcvBQADMTK88jFOrczF2y0ZexFgPGO77mSW5O2NmJqy44W/jIjtQmc3dhptO0nXSLDEJOM1zVbi1OAAA",
+      "photographer": "User Verified Product Photo"
+    },
+    "sunglasses-wayfarer-persol": {
+      "id": "sunglasses-wayfarer-persol",
+      "name": "Ray-Ban Original Wayfarer / Persol 649 Sunglasses",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/sunglasses-wayfarer-persol.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoQABAABUB8JaQAAudZiBAAAP7vx4hClkqeTthIK8kCkv5NBqRqq6bpadOwAAAA",
+      "photographer": "Ray-Ban & Persol"
+    },
+    "garment-steamer-hangers": {
+      "id": "garment-steamer-hangers",
+      "name": "Philips Handheld Garment Steamer & Solid Cedar Hangers (12-Pack)",
+      "category": "outfits",
+      "sourceUrl": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/garment-steamer-hangers.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQABAABUB8JbACdAEUOJl2Rc0AAPauqwMTMFreTEcyfq9kmBWTgp8XUluMXyKr8B9/fDAudEb99dB9e9oXkFg9wzrVzlOf4AA=",
+      "photographer": "User Verified Product Photo"
+    },
+    "motorcycle-helmet-axor-apex": {
+      "id": "motorcycle-helmet-axor-apex",
+      "name": "Axor Apex / Steelbird ISI/DOT/ECE 22.06 Full-Face Helmet",
+      "category": "bike",
+      "sourceUrl": "https://axorhelmets.com/cdn/shop/files/633.jpg?v=1787206711",
+      "localPath": "/images/items/motorcycle-helmet-axor-apex.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAABUB8JaQAAxe1yBRnXfcQAP7ok58uJi3xNZ55fHXkYahr2XNy/dzoZ/SbjyhflhfvRCnAOaidHjt2dHvmGcIe5eG5QulSmfO5QAA=",
+      "photographer": "Axor & Steelbird"
+    },
+    "motorcycle-gloves-boots-armor": {
+      "id": "motorcycle-gloves-boots-armor",
+      "name": "CE Level 2 Riding Gloves, Touring Boots & Bionic Knee Guards",
+      "category": "bike",
+      "sourceUrl": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/motorcycle-gloves-boots-armor.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwAgCdASoQABAABUB8JZwAD5AqSkPxN7/NAAD+yp35782GFM3VF1l5894At5GaecsRspiksdbLAQOVmpvfzpbpVSBieC3Tnprk03CWVBy0nPGC3164sT0dw5crk+5pbZ1ElZe6g+MEas1+L0G4yfI8cAAAAA==",
+      "photographer": "User Verified Product Photo"
+    },
+    "motorcycle-touring-accessories": {
+      "id": "motorcycle-touring-accessories",
+      "name": "Crash Guards, Quad Lock Pro Phone Mount, Disc Lock & Bike Cover",
+      "category": "bike",
+      "sourceUrl": "https://cdn.sanity.io/images/3azemr64/production/36803f488284c57fa6294e23cbcd9116336b8a4e-1024x768.jpg",
+      "localPath": "/images/items/motorcycle-touring-accessories.webp",
+      "status": "downloaded",
+      "photographer": "Quad Lock & Mototorque"
+    },
+    "motorcycle-running-maintenance": {
+      "id": "motorcycle-running-maintenance",
+      "name": "Motorcycle Running Costs: Zero-Dep Insurance, Motul 300V Oil & Service",
+      "category": "bike",
+      "sourceUrl": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/motorcycle-running-maintenance.webp",
+      "status": "downloaded",
+      "photographer": "Comprehensive Shield"
+    },
+    "skincare-routine-arsenal": {
+      "id": "skincare-routine-arsenal",
+      "name": "Dermatological Skincare Suite: CeraVe, Minimalist & La Roche-Posay",
+      "category": "grooming",
+      "sourceUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/skincare-routine-arsenal.webp",
+      "status": "downloaded",
+      "photographer": "User Verified Product Photo",
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQABAABUB8JbACsAEVnIN9HRAAAPziwjK7dj7qApk7VvuuLLcCejOkOmcbdWtS/USOCqe6MRbhsbiLZN+c2+9xQYbhtMjJMAA="
+    },
+    "barber-hair-derma-care": {
+      "id": "barber-hair-derma-care",
+      "name": "Hair Styling Clay, Beard Oil, Monthly Barber & Quarterly Dermatology",
+      "category": "grooming",
+      "sourceUrl": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/barber-hair-derma-care.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQABAABUB8JZQAAs6e15BQAP7AIWMmRQzt0n7Qb7jcWjbjQQTfmqwiMj5A3+NVf94kMAAA",
+      "photographer": "User Verified Product Photo"
+    },
+    "blackout-thermal-curtains": {
+      "id": "blackout-thermal-curtains",
+      "name": "Floor-Length Heavyweight Blackout Thermal Curtains",
+      "category": "home-health",
+      "sourceUrl": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/blackout-thermal-curtains.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQABAABUB8JQBYdh+C3Da+AAD4VgYT0FeqMDXhlh1sS4RHxUymfSsrDoJXNpXeByJEDIa5BOc7Ah76u3q/gLgESJAAAA==",
+      "photographer": "User Verified Product Photo"
+    },
+    "power-rack-safety-bars": {
+      "id": "power-rack-safety-bars",
+      "name": "Compact Multi-Grip Half Power Rack with Safety Bars",
+      "category": "home-health",
+      "sourceUrl": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/power-rack-safety-bars.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQABAABUB8JYgCdADHqlSzwofiAP7NczgOubTxlhq8AcL1qxf0IgCkPJichMgHoJL0K3UWSqoAAA==",
+      "photographer": "Rogue / Syndicate"
+    },
+    "annual-checkups-dental": {
+      "id": "annual-checkups-dental",
+      "name": "Annual Comprehensive Executive Health & Dental Diagnostic Suite",
+      "category": "home-health",
+      "sourceUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/annual-checkups-dental.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQABAABUB8JaQAAbt8opR3ygAA/sjZLDdOidhWb+HiPnETRt1uva0tRSE1OH2ccYVNSty+EeMB6Jz8X/W7F7ysq6uApixY8aELYOcYJTpAGzShYAA=",
+      "photographer": "Apollo / Metropolis"
+    },
+    "gift-kindle-paperwhite": {
+      "id": "gift-kindle-paperwhite",
+      "name": "Amazon Kindle Paperwhite (Partner's Reading Edition)",
+      "category": "gifts",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/2023_Amazon_Kindle_Paperwhite_%281%29.jpg",
+      "localPath": "/images/items/gift-kindle-paperwhite.webp",
+      "status": "downloaded",
+      "photographer": "Amazon"
+    },
+    "luxury-perfume-marc-jacobs-dior": {
+      "id": "luxury-perfume-marc-jacobs-dior",
+      "name": "Marc Jacobs Daisy / Dior Miss Dior Eau de Parfum",
+      "category": "gifts",
+      "sourceUrl": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=80",
+      "localPath": "/images/items/luxury-perfume-marc-jacobs-dior.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACQAQCdASoQABAABUB8JbACdH8AITAA/usoOUVzvPQdr74ZxsXrFwJMWdzqTTJEGK9zVHANWsih89GoAAA=",
+      "photographer": "Dior & Marc Jacobs"
+    },
+    "samsung-odyssey-oled-g9": {
+      "id": "samsung-odyssey-oled-g9",
+      "localPath": "/images/items/samsung-odyssey-oled-g9.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQABAABUB8JbACdIDZEWRmOIAAzfoJqUcI3AnbRHVeM6FBhx1u6Ewgn+rZIBDou0xLUVHa7bG4JfHLYWzAq/NDFQftYJfhK3wllYZ62IbvlEAA",
+      "photographer": "User Verified Product Photo"
     }
   },
   "categories": {
@@ -707,5 +1076,6 @@
       "status": "downloaded",
       "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAsABUB8JQBOgBm2tMwwAP2mmtsapOlSUXeRIvM9W8Ybkd+ECPP2NXkMv61IJ4gvzlC/otaE8/bkv0aMc4d/gAA="
     }
-  }
+  },
+  "lastRun": "2026-11-13T13:25:00.953Z"
 }

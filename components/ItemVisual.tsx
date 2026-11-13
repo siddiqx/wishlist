@@ -18,7 +18,9 @@ import {
   Package,
 } from "lucide-react";
 import { CategoryId } from "@/data/categories";
-import manifestData from "@/data/image-manifest.json";
+
+// Global cache-busting token to ensure no browser serves stale image caches
+export const ASSET_CACHE_KEY = "v=blueprint-20261113-v7";
 
 interface ItemVisualProps {
   item: {
@@ -27,10 +29,13 @@ interface ItemVisualProps {
     brand?: string;
     category: CategoryId;
     focal?: string;
+    images?: string[];
   };
   aspectRatio?: "4/3" | "16/10" | "1/1" | "custom";
   className?: string;
   priority?: boolean;
+  imageIndex?: number;
+  overrideSrc?: string;
 }
 
 const CATEGORY_ICONS: Record<CategoryId, React.ComponentType<{ className?: string }>> = {
@@ -136,26 +141,23 @@ export function ItemVisual({
   aspectRatio = "4/3",
   className = "",
   priority = false,
+  imageIndex = 0,
+  overrideSrc,
 }: ItemVisualProps) {
   const [hasError, setHasError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
 
-  const manifestEntry = (
-    manifestData.items as Record<
-      string,
-      {
-        localPath?: string;
-        blurDataURL?: string;
-        status?: string;
-      }
-    >
-  )[item.id];
+  // Resolve source: overrideSrc -> item.images[imageIndex] -> /images/items/${item.id}.webp
+  let rawSrc = `/images/items/${item.id}.webp`;
+  if (overrideSrc) {
+    rawSrc = overrideSrc;
+  } else if (item.images && item.images[imageIndex]) {
+    rawSrc = item.images[imageIndex];
+  }
 
-  const imageSrc: string =
-    manifestEntry?.status === "downloaded" && manifestEntry?.localPath
-      ? manifestEntry.localPath
-      : `/images/items/${item.id}.webp`;
-  const blurDataURL = manifestEntry?.blurDataURL;
+  // Append cache busting version token to bust stale browser/server cache
+  const imageSrc = rawSrc.includes("?")
+    ? `${rawSrc}&${ASSET_CACHE_KEY}`
+    : `${rawSrc}?${ASSET_CACHE_KEY}`;
 
   const Icon = CATEGORY_ICONS[item.category] || Package;
   const theme = CATEGORY_THEMES[item.category] || CATEGORY_THEMES["big-purchases"];
@@ -169,16 +171,14 @@ export function ItemVisual({
       ? "aspect-square"
       : "";
 
-  // Layer 3: Designed Fallback Tile
-  if (hasError || manifestEntry?.status === "fallback") {
+  // Graceful fallback ONLY if the image actually fails to load (e.g. 404 network error)
+  if (hasError) {
     return (
       <div
         className={`relative w-full h-full ${aspectClass} overflow-hidden bg-gradient-to-br ${theme.bgGradient} p-6 flex flex-col justify-between border border-stone-200/70 select-none ${className}`}
       >
-        {/* Subtle noise grain texture */}
         <div className="absolute inset-0 opacity-[0.035] bg-[radial-gradient(#111110_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
-        {/* Top brand header */}
         <div className="relative z-10 flex items-center justify-between">
           <span
             className={`text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full border ${theme.badgeBg} ${theme.badgeText}`}
@@ -190,14 +190,12 @@ export function ItemVisual({
           </div>
         </div>
 
-        {/* Center icon / monogram */}
         <div className="relative z-10 my-auto py-2 text-center">
           <div className="font-display text-2xl sm:text-3xl text-stone-900 leading-tight tracking-tight line-clamp-2">
             {item.name}
           </div>
         </div>
 
-        {/* Bottom subtle category signature */}
         <div className="relative z-10 flex items-center justify-between text-[11px] text-stone-400 font-mono">
           <span>THE BLUEPRINT</span>
           <span className="capitalize">{item.category}</span>
@@ -206,28 +204,22 @@ export function ItemVisual({
     );
   }
 
-  // Layer 1 & 2: Local WebP Image with blurDataURL
+  // Direct, unoptimized high-res WebP rendering: 100% opacity immediately
   return (
     <div className={`relative w-full h-full ${aspectClass} overflow-hidden bg-stone-100 ${className}`}>
-      {/* Skeleton while image decodes */}
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-stone-100 animate-pulse flex items-center justify-center z-0">
-          <Icon className="w-6 h-6 text-stone-300" />
-        </div>
-      )}
+      {/* Subtle background placeholder (behind the image at z-0) */}
+      <div className="absolute inset-0 bg-stone-100 flex items-center justify-center z-0 pointer-events-none">
+        <Icon className="w-6 h-6 text-stone-300" />
+      </div>
 
       <Image
         src={imageSrc}
         alt={item.name}
         fill
+        unoptimized
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         priority={priority}
-        placeholder={blurDataURL ? "blur" : "empty"}
-        blurDataURL={blurDataURL}
-        className={`object-cover ${item.focal || "object-center"} transition-all duration-700 ease-out group-hover:scale-[1.04] ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
-        onLoad={() => setIsLoaded(true)}
+        className={`object-cover ${item.focal || "object-center"} relative z-1 transition-transform duration-500 ease-out group-hover:scale-[1.04]`}
         onError={() => setHasError(true)}
       />
     </div>

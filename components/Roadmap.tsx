@@ -44,6 +44,7 @@ export function Roadmap() {
   const store = useWishlistStore();
   const rate = store.inrRate || 88;
   const [draggedItemId, setDraggedItemId] = useState<string | null>(null);
+  const [mobileActiveColumn, setMobileActiveColumn] = useState<"all" | "wishlist" | "planned" | "saving" | "bought">("all");
 
   const resolvedItems = INITIAL_WISHLIST_ITEMS.map((item) =>
     getResolvedItem(item, store)
@@ -94,10 +95,41 @@ export function Roadmap() {
   };
 
   return (
-    <div className="py-8 overflow-x-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 min-w-[320px]">
+    <div className="py-6 sm:py-8 overflow-x-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        {/* Mobile Column Filter Tabs (Visible on screens < md) */}
+        <div className="flex md:hidden items-center gap-1.5 overflow-x-auto no-scrollbar pb-2 pt-1" style={{ scrollbarWidth: "none" }}>
+          <button
+            onClick={() => setMobileActiveColumn("all")}
+            className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+              mobileActiveColumn === "all"
+                ? "bg-[#111110] text-white"
+                : "bg-white border border-[#E8E8E4] text-[#57574F]"
+            }`}
+          >
+            All Columns ({resolvedItems.length})
+          </button>
           {COLUMNS.map((col) => {
+            const count = resolvedItems.filter((i) => i.status === col.id).length;
+            const isActive = mobileActiveColumn === col.id;
+            return (
+              <button
+                key={col.id}
+                onClick={() => setMobileActiveColumn(col.id)}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+                  isActive
+                    ? "bg-[#111110] text-white"
+                    : "bg-white border border-[#E8E8E4] text-[#57574F]"
+                }`}
+              >
+                {col.title} ({count})
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 min-w-0">
+          {COLUMNS.filter((col) => mobileActiveColumn === "all" || mobileActiveColumn === col.id).map((col) => {
             const colItems = resolvedItems.filter((i) => i.status === col.id);
             const totalUSD = colItems.reduce(
               (acc, curr) => acc + (curr.priceUSD.min + curr.priceUSD.max) / 2,
