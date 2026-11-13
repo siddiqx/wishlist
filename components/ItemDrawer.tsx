@@ -15,6 +15,12 @@ import {
   Layers,
   FileCheck2,
   Camera,
+  FileText,
+  Sliders,
+  Scale,
+  Calendar,
+  Tag,
+  CheckCircle2,
 } from "lucide-react";
 import { useWishlistStore, getResolvedItem } from "@/lib/store";
 import { INITIAL_WISHLIST_ITEMS, Item } from "@/data/wishlist";
@@ -42,8 +48,26 @@ function ItemDrawerContent({
   const store = useWishlistStore();
   const [activeTab, setActiveTab] = useState<DrawerTab>("overview");
   const [copiedLink, setCopiedLink] = useState(false);
+  const [copiedSpecs, setCopiedSpecs] = useState(false);
   const [localNotes, setLocalNotes] = useState(item.notes || "");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const priorityColor =
+    item.priority === "high"
+      ? "bg-[#DC2626]"
+      : item.priority === "medium"
+      ? "bg-[#D97706]"
+      : "bg-[#8A8A80]";
+
+  const handleCopySpecs = () => {
+    if (!item.specs || item.specs.length === 0) return;
+    const text =
+      `${item.name} Specifications:\n` +
+      item.specs.map((s) => `${s.label}: ${s.value}`).join("\n");
+    navigator.clipboard.writeText(text);
+    setCopiedSpecs(true);
+    setTimeout(() => setCopiedSpecs(false), 2000);
+  };
 
   const price = formatPriceRange(item.priceUSD.min, item.priceUSD.max, rate);
   const isBought = item.status === "bought";
@@ -276,54 +300,153 @@ function ItemDrawerContent({
           </p>
         </div>
 
-        {/* Navigation Tabs (Overview / Specs / Alternatives / Notes) */}
+        {/* Navigation Tabs (Details / Specs / Alternatives / Notes) */}
         <div className="flex items-center gap-1 p-1 bg-[#F1F1EE] rounded-xl border border-[#E8E8E4] text-xs font-medium">
-          {(["overview", "specs", "alternatives", "notes"] as const).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`flex-1 py-1.5 rounded-lg capitalize transition-all ${
-                activeTab === tab
-                  ? "bg-white text-[#111110] font-semibold shadow-xs"
-                  : "text-[#57574F] hover:text-[#111110]"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
+          <button
+            onClick={() => setActiveTab("overview")}
+            className={`flex-1 py-2 sm:py-1.5 px-2 rounded-lg transition-all flex items-center justify-center gap-1.5 touch-manipulation ${
+              activeTab === "overview"
+                ? "bg-white text-[#111110] font-semibold shadow-xs"
+                : "text-[#57574F] hover:text-[#111110]"
+            }`}
+          >
+            <FileText className="w-3.5 h-3.5" />
+            <span>Details</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("specs")}
+            className={`flex-1 py-2 sm:py-1.5 px-2 rounded-lg transition-all flex items-center justify-center gap-1.5 touch-manipulation ${
+              activeTab === "specs"
+                ? "bg-white text-[#111110] font-semibold shadow-xs"
+                : "text-[#57574F] hover:text-[#111110]"
+            }`}
+          >
+            <Sliders className="w-3.5 h-3.5" />
+            <span>Specs</span>
+            {item.specs && item.specs.length > 0 && (
+              <span
+                className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  activeTab === "specs"
+                    ? "bg-[#111110] text-white"
+                    : "bg-[#E8E8E4] text-[#57574F]"
+                }`}
+              >
+                {item.specs.length}
+              </span>
+            )}
+          </button>
+
+          <button
+            onClick={() => setActiveTab("alternatives")}
+            className={`flex-1 py-2 sm:py-1.5 px-2 rounded-lg transition-all flex items-center justify-center gap-1.5 touch-manipulation ${
+              activeTab === "alternatives"
+                ? "bg-white text-[#111110] font-semibold shadow-xs"
+                : "text-[#57574F] hover:text-[#111110]"
+            }`}
+          >
+            <Scale className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Alternatives</span>
+            <span className="sm:hidden">Alts</span>
+            {item.alternatives && item.alternatives.length > 0 && (
+              <span
+                className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  activeTab === "alternatives"
+                    ? "bg-[#111110] text-white"
+                    : "bg-[#E8E8E4] text-[#57574F]"
+                }`}
+              >
+                {item.alternatives.length}
+              </span>
+            )}
+          </button>
+
+          <button
+            onClick={() => setActiveTab("notes")}
+            className={`flex-1 py-2 sm:py-1.5 px-2 rounded-lg transition-all flex items-center justify-center gap-1.5 touch-manipulation ${
+              activeTab === "notes"
+                ? "bg-white text-[#111110] font-semibold shadow-xs"
+                : "text-[#57574F] hover:text-[#111110]"
+            }`}
+          >
+            <span>Notes</span>
+            {localNotes.trim() && (
+              <span className="w-1.5 h-1.5 rounded-full bg-[#4F46E5]" />
+            )}
+          </button>
         </div>
 
-        {/* Tab 1: Overview */}
+        {/* Tab 1: Details (Overview) */}
         {activeTab === "overview" && (
-          <div className="space-y-5">
-            {/* Quick Highlights Grid */}
-            <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="p-4 rounded-xl bg-white border border-[#E8E8E4]">
-                <div className="text-[10px] font-semibold uppercase text-[#8A8A80]">Timeline</div>
-                <div className="text-sm font-semibold text-[#111110] mt-0.5 capitalize">
+          <div className="space-y-4 sm:space-y-5">
+            {/* Executive 4-Metric Grid */}
+            <div className="grid grid-cols-2 gap-2.5 text-xs">
+              {/* Metric 1: Timeline */}
+              <div className="p-3 sm:p-3.5 rounded-xl bg-white border border-[#E8E8E4] shadow-xs">
+                <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase text-[#8A8A80]">
+                  <Calendar className="w-3 h-3 text-[#4F46E5]" />
+                  <span>Timeline</span>
+                </div>
+                <div className="text-xs sm:text-sm font-semibold text-[#111110] mt-1 capitalize">
                   {item.when === "now" ? "Core Roadmap" : "Future Milestone"}
                 </div>
+                <div className="text-[10px] text-[#8A8A80] mt-0.5 truncate">
+                  {item.when === "now" ? "Immediate acquisition" : "Scheduled milestone"}
+                </div>
               </div>
-              <div className="p-4 rounded-xl bg-white border border-[#E8E8E4]">
-                <div className="text-[10px] font-semibold uppercase text-[#8A8A80]">Priority</div>
-                <div className="text-sm font-semibold text-[#111110] mt-0.5 capitalize flex items-center gap-1.5">
-                  <span
-                    className={`w-2 h-2 rounded-full ${
-                      item.priority === "high"
-                        ? "bg-[#DC2626]"
-                        : item.priority === "medium"
-                        ? "bg-[#D97706]"
-                        : "bg-[#8A8A80]"
-                    }`}
-                  />
-                  <span>{item.priority.charAt(0).toUpperCase() + item.priority.slice(1)}</span>
+
+              {/* Metric 2: Priority */}
+              <div className="p-3 sm:p-3.5 rounded-xl bg-white border border-[#E8E8E4] shadow-xs">
+                <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase text-[#8A8A80]">
+                  <span className={`w-2 h-2 rounded-full ${priorityColor}`} />
+                  <span>Priority</span>
+                </div>
+                <div className="text-xs sm:text-sm font-semibold text-[#111110] mt-1 capitalize">
+                  {item.priority.charAt(0).toUpperCase() + item.priority.slice(1)} Tier
+                </div>
+                <div className="text-[10px] text-[#8A8A80] mt-0.5 truncate">
+                  {item.priority === "high"
+                    ? "Essential gear"
+                    : item.priority === "medium"
+                    ? "Standard priority"
+                    : "Elective upgrade"}
+                </div>
+              </div>
+
+              {/* Metric 3: Plan Allocation */}
+              <div className="p-3 sm:p-3.5 rounded-xl bg-white border border-[#E8E8E4] shadow-xs">
+                <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase text-[#8A8A80]">
+                  <CheckCircle2 className="w-3 h-3 text-[#16A34A]" />
+                  <span>Budget Plan</span>
+                </div>
+                <div className="text-xs sm:text-sm font-semibold mt-1">
+                  <span className={item.isInPlan ? "text-[#4F46E5]" : "text-[#57574F]"}>
+                    {item.isInPlan ? "In Active Plan" : "Not in Plan"}
+                  </span>
+                </div>
+                <div className="text-[10px] text-[#8A8A80] mt-0.5 truncate">
+                  {item.isInPlan ? "Counted in total" : "Excluded from total"}
+                </div>
+              </div>
+
+              {/* Metric 4: Category */}
+              <div className="p-3 sm:p-3.5 rounded-xl bg-white border border-[#E8E8E4] shadow-xs">
+                <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase text-[#8A8A80]">
+                  <Tag className="w-3 h-3 text-[#D97706]" />
+                  <span>Category</span>
+                </div>
+                <div className="text-xs sm:text-sm font-semibold text-[#111110] mt-1 capitalize truncate">
+                  {item.category.replace("-", " ")}
+                </div>
+                <div className="text-[10px] text-[#8A8A80] mt-0.5 capitalize">
+                  Status: {item.status}
                 </div>
               </div>
             </div>
 
             {/* Candidate Group Selector for Motorcycles */}
             {item.candidateGroup === "motorcycle-choice" && (
-              <div className="p-4 rounded-xl bg-white border border-emerald-200/80 shadow-xs text-xs space-y-2">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-emerald-200/80 shadow-xs text-xs space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 font-semibold text-[#111110]">
                     <span className="w-2 h-2 rounded-full bg-emerald-600" />
@@ -331,13 +454,15 @@ function ItemDrawerContent({
                   </div>
                   <span
                     className={`px-2 py-0.5 rounded text-[10px] font-semibold ${
-                      item.isInPlan ? "bg-emerald-100 text-emerald-800" : "bg-stone-100 text-stone-600"
+                      item.isInPlan
+                        ? "bg-emerald-100 text-emerald-800"
+                        : "bg-stone-100 text-stone-600"
                     }`}
                   >
                     {item.isInPlan ? "Active in Budget Plan" : "Alternative Model"}
                   </span>
                 </div>
-                <p className="text-[#57574F] leading-relaxed">
+                <p className="text-[#57574F] leading-relaxed text-[11px] sm:text-xs">
                   Only one motorcycle is budgeted in your total. Selecting this machine sets it as your active choice and updates your budget seamlessly.
                 </p>
                 {!item.isInPlan ? (
@@ -357,11 +482,14 @@ function ItemDrawerContent({
 
             {/* Sub-items / Component Breakdown */}
             {item.subItems && item.subItems.length > 0 && (
-              <div className="p-5 rounded-2xl bg-white border border-[#E8E8E4] space-y-3">
+              <div className="p-3.5 sm:p-5 rounded-2xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8A8A80]">
-                    Component &amp; Recipe Breakdown
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <Layers className="w-3.5 h-3.5 text-[#4F46E5]" />
+                    <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8A8A80]">
+                      Component Breakdown
+                    </h3>
+                  </div>
                   <span className="text-xs text-[#8A8A80] font-mono">
                     {item.subItems.length} items
                   </span>
@@ -370,16 +498,20 @@ function ItemDrawerContent({
                   {item.subItems.map((sub, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-[#F7F7F5] border border-[#E8E8E4]/60 flex items-start justify-between gap-3 text-xs"
+                      className="p-2.5 sm:p-3 rounded-xl bg-[#F7F7F5] border border-[#E8E8E4]/60 flex items-start justify-between gap-2.5 text-xs"
                     >
-                      <div>
-                        <div className="font-semibold text-[#111110]">{sub.name}</div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-semibold text-[#111110] truncate">
+                          {sub.name}
+                        </div>
                         {sub.detail && (
-                          <div className="text-[#57574F] mt-0.5 leading-relaxed">{sub.detail}</div>
+                          <div className="text-[#57574F] text-[11px] mt-0.5 leading-snug line-clamp-2">
+                            {sub.detail}
+                          </div>
                         )}
                       </div>
                       {sub.costUSD !== undefined && (
-                        <div className="text-right font-mono font-semibold text-[#111110] shrink-0">
+                        <div className="text-right font-mono font-semibold text-[#111110] shrink-0 pl-2">
                           {formatUSD(sub.costUSD)}
                         </div>
                       )}
@@ -391,7 +523,7 @@ function ItemDrawerContent({
 
             {/* Legal Verification Checklist (for Land/Real estate) */}
             {item.checklist && item.checklist.length > 0 && (
-              <div className="p-5 rounded-2xl bg-white border border-[#E8E8E4] space-y-3">
+              <div className="p-3.5 sm:p-5 rounded-2xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
                   <FileCheck2 className="w-4 h-4 text-[#16A34A]" />
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8A8A80]">
@@ -404,67 +536,166 @@ function ItemDrawerContent({
                       <div className="w-4 h-4 rounded border border-[#E8E8E4] bg-[#F7F7F5] flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-[#16A34A]" />
                       </div>
-                      <span className="leading-relaxed">{check}</span>
+                      <span className="leading-relaxed text-[11px] sm:text-xs">{check}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             )}
+
+            {/* Quick Plan Switcher Card */}
+            <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E8E8E4] shadow-xs flex items-center justify-between gap-3 text-xs">
+              <div>
+                <div className="font-semibold text-[#111110]">Interactive Budget Plan</div>
+                <div className="text-[#8A8A80] text-[11px] mt-0.5">
+                  {item.isInPlan
+                    ? "Included in running total calculation"
+                    : "Add this item to calculate total expenditure"}
+                </div>
+              </div>
+              <button
+                onClick={() => store.toggleInPlan(item.id)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors shrink-0 ${
+                  item.isInPlan
+                    ? "bg-[#EEF0FF] text-[#4F46E5] border border-indigo-200"
+                    : "bg-[#111110] text-white hover:bg-stone-800"
+                }`}
+              >
+                {item.isInPlan ? "Remove Plan" : "+ Add to Plan"}
+              </button>
+            </div>
           </div>
         )}
 
-        {/* Tab 2: Specs */}
+        {/* Tab 2: Specs (Optimized Mobile Spec Sheet) */}
         {activeTab === "specs" && (
-          <div className="p-5 rounded-2xl bg-white border border-[#E8E8E4] shadow-xs">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8A8A80] mb-3">
-              Technical Specifications
-            </h3>
-            {item.specs.length > 0 ? (
-              <dl className="divide-y divide-[#F1F1EE]">
-                {item.specs.map((spec, idx) => (
+          <div className="space-y-4">
+            {/* Top 2 to 4 Hero Metric Chips */}
+            {item.specs && item.specs.length > 0 && (
+              <div className="grid grid-cols-2 gap-2.5">
+                {item.specs.slice(0, 4).map((spec, idx) => (
                   <div
                     key={idx}
-                    className="py-2.5 flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1"
+                    className="p-3 sm:p-3.5 rounded-xl bg-white border border-[#E8E8E4] shadow-xs"
                   >
-                    <dt className="text-[#57574F] font-medium sm:w-1/3">{spec.label}</dt>
-                    <dd className="text-[#111110] font-mono sm:w-2/3 sm:text-right font-medium">
+                    <div className="text-[10px] font-semibold uppercase tracking-wider text-[#8A8A80] truncate">
+                      {spec.label}
+                    </div>
+                    <div className="text-xs sm:text-sm font-bold text-[#111110] font-mono mt-0.5 truncate tabular-nums">
                       {spec.value}
-                    </dd>
+                    </div>
                   </div>
                 ))}
-              </dl>
-            ) : (
-              <p className="text-xs text-[#8A8A80] py-4">No technical specs recorded.</p>
+              </div>
             )}
+
+            {/* Complete Specifications Sheet */}
+            <div className="p-3.5 sm:p-5 rounded-2xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Sliders className="w-3.5 h-3.5 text-[#4F46E5]" />
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8A8A80]">
+                    Verified Technical Specifications
+                  </h3>
+                </div>
+                <span className="text-[11px] font-mono text-[#8A8A80]">
+                  {item.specs.length} fields
+                </span>
+              </div>
+
+              {item.specs && item.specs.length > 0 ? (
+                <div className="space-y-1.5 pt-1">
+                  {item.specs.map((spec, idx) => (
+                    <div
+                      key={idx}
+                      className="p-2.5 sm:p-3 rounded-xl bg-[#F7F7F5]/70 hover:bg-[#F1F1EE] border border-[#E8E8E4]/40 flex items-center justify-between text-xs gap-3 transition-colors"
+                    >
+                      <span className="text-[#57574F] font-medium text-[11px] sm:text-xs shrink-0 max-w-[45%]">
+                        {spec.label}
+                      </span>
+                      <span className="text-[#111110] font-mono font-semibold text-[11px] sm:text-xs text-right tabular-nums break-words flex-1">
+                        {spec.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-xs text-[#8A8A80] py-4 text-center">
+                  No technical specs recorded.
+                </p>
+              )}
+
+              {item.specs && item.specs.length > 0 && (
+                <div className="pt-2 flex justify-end">
+                  <button
+                    onClick={handleCopySpecs}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#E8E8E4] bg-[#F7F7F5] hover:bg-stone-200 text-[#57574F] hover:text-[#111110] text-[11px] font-medium transition-colors"
+                  >
+                    {copiedSpecs ? (
+                      <>
+                        <Check className="w-3 h-3 text-[#16A34A]" />
+                        <span className="text-[#16A34A] font-semibold">Specs Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3 h-3" />
+                        <span>Copy Spec Sheet</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         )}
 
         {/* Tab 3: Alternatives */}
         {activeTab === "alternatives" && (
-          <div className="p-5 rounded-2xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8A8A80]">
-              Considered Alternatives
-            </h3>
+          <div className="p-3.5 sm:p-5 rounded-2xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Scale className="w-3.5 h-3.5 text-[#4F46E5]" />
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8A8A80]">
+                  Considered Alternatives
+                </h3>
+              </div>
+              <span className="text-[11px] text-[#8A8A80] font-mono">
+                {item.alternatives?.length || 0} models
+              </span>
+            </div>
+
+            <p className="text-[11px] sm:text-xs text-[#57574F] leading-relaxed">
+              Alternative models evaluated during blueprint research within the same tier or price-to-performance threshold:
+            </p>
+
             {item.alternatives && item.alternatives.length > 0 ? (
-              <div className="flex flex-wrap gap-2">
+              <div className="space-y-2 pt-1">
                 {item.alternatives.map((alt, idx) => (
-                  <span
+                  <div
                     key={idx}
-                    className="px-3 py-1.5 rounded-xl bg-[#F1F1EE] border border-[#E8E8E4] text-[#111110] text-xs font-medium"
+                    className="p-3 rounded-xl bg-[#F7F7F5] border border-[#E8E8E4] flex items-center justify-between gap-3 text-xs"
                   >
-                    {alt}
-                  </span>
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-stone-400 shrink-0" />
+                      <span className="font-semibold text-[#111110] truncate">{alt}</span>
+                    </div>
+                    <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-md bg-white border border-[#E8E8E4] text-[#8A8A80] shrink-0">
+                      Option
+                    </span>
+                  </div>
                 ))}
               </div>
             ) : (
-              <p className="text-xs text-[#8A8A80] py-4">No direct alternatives listed.</p>
+              <p className="text-xs text-[#8A8A80] py-4 text-center">
+                No direct alternatives listed.
+              </p>
             )}
           </div>
         )}
 
         {/* Tab 4: Notes */}
         {activeTab === "notes" && (
-          <div className="p-5 rounded-2xl bg-white border border-[#E8E8E4] shadow-xs space-y-2">
+          <div className="p-3.5 sm:p-5 rounded-2xl bg-white border border-[#E8E8E4] shadow-xs space-y-3">
             <div className="flex items-center justify-between">
               <label
                 htmlFor="drawer-notes"
@@ -472,7 +703,62 @@ function ItemDrawerContent({
               >
                 Personal Notes &amp; Observations
               </label>
+              <span className="text-[10px] font-mono text-[#8A8A80]">
+                Saved to device
+              </span>
             </div>
+
+            {/* Quick Insert Snippet Chips for Mobile */}
+            <div
+              className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 text-[11px]"
+              style={{ WebkitOverflowScrolling: "touch" }}
+            >
+              <button
+                type="button"
+                onClick={() => {
+                  const addition = (localNotes ? "\n" : "") + "Quotation: $";
+                  setLocalNotes(localNotes + addition);
+                  store.setItemNotes(item.id, localNotes + addition);
+                }}
+                className="px-2.5 py-1 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#57574F] hover:text-[#111110] whitespace-nowrap transition-colors"
+              >
+                + Quotation
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  const addition = (localNotes ? "\n" : "") + "Target Date: ";
+                  setLocalNotes(localNotes + addition);
+                  store.setItemNotes(item.id, localNotes + addition);
+                }}
+                className="px-2.5 py-1 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#57574F] hover:text-[#111110] whitespace-nowrap transition-colors"
+              >
+                + Target Date
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  const addition = (localNotes ? "\n" : "") + "Serial / Config: ";
+                  setLocalNotes(localNotes + addition);
+                  store.setItemNotes(item.id, localNotes + addition);
+                }}
+                className="px-2.5 py-1 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#57574F] hover:text-[#111110] whitespace-nowrap transition-colors"
+              >
+                + Serial No.
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  const addition = (localNotes ? "\n" : "") + "Vendor / Store: ";
+                  setLocalNotes(localNotes + addition);
+                  store.setItemNotes(item.id, localNotes + addition);
+                }}
+                className="px-2.5 py-1 rounded-lg bg-[#F1F1EE] hover:bg-stone-200 text-[#57574F] hover:text-[#111110] whitespace-nowrap transition-colors"
+              >
+                + Vendor
+              </button>
+            </div>
+
             <textarea
               id="drawer-notes"
               value={localNotes}
