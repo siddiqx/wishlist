@@ -1,7 +1,6 @@
 "use client";
 
 import { Suspense, useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { TopBar } from "@/components/TopBar";
 import { Hero } from "@/components/Hero";
@@ -18,7 +17,6 @@ import { CompareModal } from "@/components/CompareModal";
 import { CommandPalette } from "@/components/CommandPalette";
 import { BackupModal } from "@/components/BackupModal";
 import { EmptyState } from "@/components/EmptyState";
-import { PlanSummaryPill } from "@/components/PlanSummaryPill";
 import { OnboardingHint } from "@/components/OnboardingHint";
 import { Footer } from "@/components/Footer";
 import { URLSync } from "@/components/URLSync";
@@ -117,20 +115,15 @@ export default function Home() {
                   </div>
 
                   {/* Cards Grid with clean responsive gap */}
-                  <motion.div
-                    layout
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
-                  >
-                    <AnimatePresence mode="popLayout">
-                      {displayItems.map((item, index) => (
-                        <ItemCard
-                          key={item.id}
-                          item={item}
-                          isHero={index === 0 && catItems.length >= 4}
-                        />
-                      ))}
-                    </AnimatePresence>
-                  </motion.div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                    {displayItems.map((item, index) => (
+                      <ItemCard
+                        key={item.id}
+                        item={item}
+                        isHero={index === 0 && catItems.length >= 4}
+                      />
+                    ))}
+                  </div>
 
                   {/* "Show all (N)" button if category has > 6 items */}
                   {catItems.length > 6 && (
@@ -159,25 +152,17 @@ export default function Home() {
           </div>
         ) : (
           /* Filtered Flat Grid */
-          <motion.div
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
-          >
-            <AnimatePresence mode="popLayout">
-              {filteredItems.map((item, index) => (
-                <ItemCard
-                  key={item.id}
-                  item={item}
-                  isHero={index === 0 && store.activeCategory !== "all"}
-                />
-              ))}
-            </AnimatePresence>
-          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            {filteredItems.map((item, index) => (
+              <ItemCard
+                key={item.id}
+                item={item}
+                isHero={index === 0 && store.activeCategory !== "all"}
+              />
+            ))}
+          </div>
         )}
       </main>
-
-      {/* Floating Plan Summary Pill */}
-      <PlanSummaryPill />
 
       {/* Onboarding Hint Tour */}
       <OnboardingHint />

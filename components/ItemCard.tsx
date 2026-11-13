@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { Bookmark, Eye, CheckCircle2 } from "lucide-react";
 import { Item } from "@/data/wishlist";
@@ -62,22 +61,13 @@ export function ItemCard({ item, isHero = false }: ItemCardProps) {
   };
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      whileHover={{ y: -4 }}
-      exit={{ opacity: 0, scale: 0.96 }}
-      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+    <div
       onClick={() => store.openDetail(item.id)}
-      className={`group relative flex flex-col bg-white rounded-2xl border ${
+      className={`group relative flex flex-col bg-white rounded-2xl border transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_12px_24px_-6px_rgba(17,17,16,0.08)] cursor-pointer overflow-hidden ${
         isHero
           ? "border-indigo-200/80 shadow-[0_4px_14px_-2px_rgba(79,70,229,0.06)]"
           : "border-[#E8E8E4] shadow-[0_2px_8px_-2px_rgba(17,17,16,0.05)]"
-      } hover:shadow-[0_12px_24px_-6px_rgba(17,17,16,0.08)] cursor-pointer overflow-hidden ${
-        isBought ? "opacity-80 hover:opacity-100" : ""
-      }`}
+      } ${isBought ? "opacity-80 hover:opacity-100" : ""}`}
     >
       {/* 4:3 Image Container with Inner Hairline Border */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F1F1EE] rounded-t-2xl">
@@ -217,6 +207,6 @@ export function ItemCard({ item, isHero = false }: ItemCardProps) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

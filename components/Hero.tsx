@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowDown, Calculator, CheckCircle2 } from "lucide-react";
@@ -10,37 +9,18 @@ import { INITIAL_WISHLIST_ITEMS } from "@/data/wishlist";
 import { AnimatedNumber } from "./AnimatedNumber";
 import { ASSET_CACHE_KEY } from "./ItemVisual";
 
-// Spotlight card helper for cursor tracking effect
-function SpotlightCard({
+// Lightweight, hardware-accelerated stat card
+function StatCard({
   children,
   className = "",
 }: {
   children: React.ReactNode;
   className?: string;
 }) {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
-
   return (
     <div
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className={`relative overflow-hidden rounded-2xl bg-white border border-[#E8E8E4] p-5 shadow-[0_2px_8px_-2px_rgba(17,17,16,0.05)] transition-all duration-300 hover:shadow-[0_12px_24px_-6px_rgba(17,17,16,0.08)] ${className}`}
+      className={`relative overflow-hidden rounded-2xl bg-white border border-[#E8E8E4] p-5 shadow-[0_2px_8px_-2px_rgba(17,17,16,0.05)] hover:border-stone-300 hover:shadow-[0_8px_20px_-4px_rgba(17,17,16,0.08)] transition-all duration-200 ease-out ${className}`}
     >
-      {/* Cursor spotlight halo */}
-      <div
-        className="pointer-events-none absolute -inset-px transition-opacity duration-300"
-        style={{
-          opacity: isHovered ? 1 : 0,
-          background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(79, 70, 229, 0.06), transparent 80%)`,
-        }}
-      />
       <div className="relative z-10">{children}</div>
     </div>
   );
@@ -74,17 +54,6 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Headline & CTAs (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            {/* Eyebrow badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-[#EEF0FF] text-[#4F46E5] border border-indigo-200/50"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#4F46E5] animate-pulse" />
-              Siddiq&apos;s Blueprint &middot; 2026 Edition
-            </motion.div>
-
             {/* Display Headline */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -212,7 +181,7 @@ export function Hero() {
           className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
         >
           {/* Stat 1: Total Items */}
-          <SpotlightCard>
+          <StatCard>
             <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1">
               Catalogue Items
             </div>
@@ -223,10 +192,10 @@ export function Hero() {
             <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
               Across 12 categorized blueprints
             </div>
-          </SpotlightCard>
+          </StatCard>
 
           {/* Stat 2: Core One-Time Estimate */}
-          <SpotlightCard>
+          <StatCard>
             <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 flex items-center justify-between">
               <span className="truncate">Core One-Time</span>
               <span className="text-[10px] font-mono text-[#8A8A80] shrink-0 ml-1">₹{rate}/$</span>
@@ -237,10 +206,10 @@ export function Hero() {
             <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
               ₹{(summary.oneTimeINR.min / 100000).toFixed(1)}L&ndash;₹{(summary.oneTimeINR.max / 100000).toFixed(1)}L INR
             </div>
-          </SpotlightCard>
+          </StatCard>
 
           {/* Stat 3: Completion Progress Ring */}
-          <SpotlightCard>
+          <StatCard>
             <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 flex items-center justify-between">
               <span>Acquired</span>
               <span className="text-[11px] sm:text-xs font-semibold text-[#16A34A] flex items-center gap-1">
@@ -258,10 +227,10 @@ export function Hero() {
                 className="h-full bg-[#16A34A] rounded-full transition-all duration-700"
               />
             </div>
-          </SpotlightCard>
+          </StatCard>
 
           {/* Stat 4: Monthly Running Cost */}
-          <SpotlightCard>
+          <StatCard>
             <div className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#8A8A80] mb-1 truncate">
               Monthly Running Cost
             </div>
@@ -272,7 +241,7 @@ export function Hero() {
             <div className="text-[11px] sm:text-xs text-[#57574F] mt-2 truncate">
               Grooming, diet, gym, bike &amp; insurance
             </div>
-          </SpotlightCard>
+          </StatCard>
         </motion.div>
       </div>
     </section>

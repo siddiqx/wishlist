@@ -6,18 +6,18 @@ import { CATEGORIES } from "@/data/categories";
 import { INITIAL_WISHLIST_ITEMS } from "@/data/wishlist";
 import { useWishlistStore } from "@/lib/store";
 
+// Pre-compute category item counts once
+const COUNTS_BY_CATEGORY: Record<string, number> = {
+  all: INITIAL_WISHLIST_ITEMS.length,
+};
+for (const cat of CATEGORIES) {
+  COUNTS_BY_CATEGORY[cat.id] = INITIAL_WISHLIST_ITEMS.filter((i) => i.category === cat.id).length;
+}
+
 export function CategoryTabs() {
   const store = useWishlistStore();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  // Compute item counts per category
-  const counts: Record<string, number> = {
-    all: INITIAL_WISHLIST_ITEMS.length,
-  };
-
-  for (const cat of CATEGORIES) {
-    counts[cat.id] = INITIAL_WISHLIST_ITEMS.filter((i) => i.category === cat.id).length;
-  }
+  const counts = COUNTS_BY_CATEGORY;
 
   // Scroll active tab into view horizontally if needed
   useEffect(() => {

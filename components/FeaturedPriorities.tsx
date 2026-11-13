@@ -67,7 +67,7 @@ export function FeaturedPriorities() {
       <div
         ref={scrollRef}
         className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 no-scrollbar"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
       >
         {topItems.map((item) => {
           const price = formatPriceRange(item.priceUSD.min, item.priceUSD.max, rate);

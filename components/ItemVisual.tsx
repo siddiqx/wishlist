@@ -219,7 +219,7 @@ export function ItemVisual({
         unoptimized
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         priority={priority}
-        className={`object-cover ${item.focal || "object-center"} relative z-1 transition-transform duration-500 ease-out group-hover:scale-[1.04]`}
+        className={`object-cover ${item.focal || "object-center"} relative z-1 transition-transform duration-500 ease-out group-hover:scale-[1.04] will-change-transform`}
         onError={() => setHasError(true)}
       />
     </div>
