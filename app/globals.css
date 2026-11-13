@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page: #F7F7F5;
+  --color-card: #FFFFFF;
+  --color-subtle: #F1F1EE;
+  --color-border: #E8E8E4;
+
+  --color-text-primary: #111110;
+  --color-text-secondary: #57574F;
+  --color-text-muted: #8A8A80;
+
+  --color-accent: #4F46E5;
+  --color-accent-tint: #EEF0FF;
+
+  --color-success: #16A34A;
+  --color-success-tint: #F0FDF4;
+  --color-warning: #D97706;
+  --color-warning-tint: #FFFBEB;
+  --color-danger: #DC2626;
+  --color-danger-tint: #FEF2F2;
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  --shadow-xs: 0 1px 2px 0 rgba(17, 17, 16, 0.04);
+  --shadow-sm: 0 2px 8px -2px rgba(17, 17, 16, 0.05), 0 1px 3px 0 rgba(17, 17, 16, 0.03);
+  --shadow-md: 0 12px 24px -6px rgba(17, 17, 16, 0.08), 0 4px 8px -2px rgba(17, 17, 16, 0.04);
+  --shadow-lg: 0 24px 48px -12px rgba(17, 17, 16, 0.12), 0 8px 16px -4px rgba(17, 17, 16, 0.06);
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-instrument-serif), Georgia, serif;
+}
+
+:root {
+  --background: #F7F7F5;
+  --foreground: #111110;
+
+  /* shadcn/ui compatible root variables */
+  --card: #FFFFFF;
+  --card-foreground: #111110;
+  --popover: #FFFFFF;
+  --popover-foreground: #111110;
+  --primary: #4F46E5;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F1F1EE;
+  --secondary-foreground: #111110;
+  --muted: #F1F1EE;
+  --muted-foreground: #8A8A80;
+  --accent: #EEF0FF;
+  --accent-foreground: #4F46E5;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8E8E4;
+  --input: #E8E8E4;
+  --ring: #4F46E5;
+  --radius: 16px;
+}
+
+/* Reset / Base Layer */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #F7F7F5;
+  color: #111110;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F7F7F5;
+  color: #111110;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D8D4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B4B4AE;
+}
+
+/* Tabular figures for prices and numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

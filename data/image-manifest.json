@@ -1,0 +1,711 @@
+{
+  "items": {
+    "gaming-pc-opt-a-sweetspot": {
+      "localPath": "/images/items/gaming-pc-opt-a-sweetspot.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAABwAQCdASoQAAsABUB8JZwC7AFAAAD+7t5MtruIwD57GuyW/5Q1HIZH0igMRfSMAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-opt-b-bundle": {
+      "localPath": "/images/items/gaming-pc-opt-b-bundle.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoQABgAPzmGulQvKSWjMAgB4CcJZgCdINiDA09lPKWndOV2cWYAAP7r01Pt3yV29KTAeZe8T6vvEol5WU2xjzv5JFRytaoQcG/CfFjSu9ZeWqm9deJdhQFdWZmEeh2aUebUEXxSZdtq0mnHGPK5u7EUMJtH9tHrjKoK8n9oiG4AAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-ryzen-9800x3d": {
+      "localPath": "/images/items/gaming-pc-ryzen-9800x3d.webp",
+      "sourceUrl": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2900400-ryzen-7-9800x3d.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAkABUB8JZwAAlxV5egAAP7um7aLHEKgrn5P7ej2ixMp1W3ASlogAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-rtx-5070ti": {
+      "localPath": "/images/items/gaming-pc-rtx-5070ti.webp",
+      "sourceUrl": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/geforce-rtx-50series-og-1200x630.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAAgABUB8JbAC7AD0SjiFQOQAAP7ytI0kRDKxKpd5LMdYU3N+1IpYawj7hzTBVk/pp21tzgRI7gAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-ssd-2tb-990pro": {
+      "localPath": "/images/items/gaming-pc-ssd-2tb-990pro.webp",
+      "sourceUrl": "https://images.samsung.com/is/image/samsung/p6pim/in/mz-v9p2t0bw/gallery/in-990pro-nvme-m2-ssd-mz-v9p2t0bw-534630688?$1164_776_PNG$",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4WAoAAAAQAAAADwAACgAAQUxQSEkAAAABd6AokqTmcj4DfPHvjj82IiLgv9N0nQJpycAokq1GhGNGAk6QgA1u+EDBx0qWgKe0KyGi/xOAfndlT3SZo4yXebDMZwCAQNHvAFZQOCAuAAAAsAEAnQEqEAALAAVAfCWkAALqdlpoAAD+6MmM6lunrr9o802cIq7/XP+AqAAAAA==",
+      "credit": "Samsung Electronics Official",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-ram-ddr5-32gb": {
+      "localPath": "/images/items/gaming-pc-ram-ddr5-32gb.webp",
+      "sourceUrl": "https://www.gskill.com/img/overview/flare-x5/01-flare-x5-black-white-main-expo.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAYABUB8JZwAApMrHgfFAAD+8W7GIeoyRYF1igf6aWrGty8/UTvKriAAAA==",
+      "credit": "G.Skill International Official",
+      "width": 1200,
+      "height": 900
+    },
+    "alienware-aw2725df": {
+      "localPath": "/images/items/alienware-aw2725df.webp",
+      "sourceUrl": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/alienware/aw2725df/media-gallery/monitor-alienware-2725df-black-gallery-1.psd?fmt=jpg&wid=1200",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQABAABUB8JZACdADadrefgAD+mqsZO+WU35Afk2lyETMfsFPnnCgWIE7L2lMkVao6F1COL2EvUCleEW4PF0mw2u3Kmc3Sr/QBrUO7JCd1RMeAAAA=",
+      "credit": "Dell Alienware Official",
+      "width": 1200,
+      "height": 900
+    },
+    "secretlab-titan-evo": {
+      "localPath": "/images/items/secretlab-titan-evo.webp",
+      "sourceUrl": "https://images.secretlab.co/theme/common/collections-v2-TITAN-Evo-hero.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAABwAQCdASoQAAcABUB8JYgC7AFAAAD+7Nn7mm7f98etCLnisVBg6l1Hr22R9vwpEAA=",
+      "credit": "Secretlab Official",
+      "width": 1200,
+      "height": 900
+    },
+    "gaming-pc-mobo-x870": {
+      "localPath": "/images/items/gaming-pc-mobo-x870.webp",
+      "sourceUrl": "https://dlcdnwebimgs.asus.com/gain/64c122cf-1bab-4bac-aa97-591e1573dd29/",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRggBAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSI8AAAANcFTb1rKc+3C3ETkYMqMahLA4lKCBu/PL9/8/WiEiJgDrzB6povT0hOfAJl0vkzPdfFr9YRrULgM0Sj65OSjCISDCIj4a7wJzgPjRISz9y7sLM7+lHtNeJMC3NE8iRYe6MyBDoKwHiB9TIX+aAyK5SJFAam0jAOPrHsEifY4i4Vm6eoWA0SAXQpQL2WcIAABWUDggUgAAALABAJ0BKhAAEAAFQHwlpAAB5x5awoAA/SvTnkBBQ4Q7iIJIC0Fa55HBmPHu4qSu70jsF4Ly0JJjoxrOXOyNu0PN9FBrEfuNzVhT6EV3St5w6AA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "wooting-60he": {
+      "localPath": "/images/items/wooting-60he.webp",
+      "sourceUrl": "https://wooting-website.ams3.cdn.digitaloceanspaces.com/products/keyboards/60HE/60HE_OG.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoQAAgABUB8JZwAAp1eJdOAAP7fYwrfjoLgYd8Sl7t72/z7ioeralDvo3nhAAAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "logitech-g-pro-x-superlight-2": {
+      "localPath": "/images/items/logitech-g-pro-x-superlight-2.webp",
+      "sourceUrl": "https://resource.logitechg.com/w_1200,h_900,ar_4:3,c_pad,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight-2/new-gallery-assets-2025/pro-x-superlight-2-mice-top-angle-white-gallery-1.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4WAoAAAAQAAAADwAACwAAQUxQSEEAAAABYBXbthIcMrjDp8bwrFrE6jyDM0SIiAmQfja73oL0k5DHRGJCCCmQQkgQX7ARR/CQUmiRRCgQaSHkkGBtmnUMBQBWUDggOAAAAPABAJ0BKhAADAAFQHwlpAAPjA+p6lFEAADBlXF2HSQsdbmL9pTeyNRnH3Ndp5xotOIuOPKjAAAA",
+      "credit": "Logitech G Official",
+      "width": 1200,
+      "height": 900
+    },
+    "flexispot-e7-desk": {
+      "localPath": "/images/items/flexispot-e7-desk.webp",
+      "sourceUrl": "https://s3.springbeetle.top/prod-common-bucket/commodity/item/1028_file_E7-800-20250326_20260325_wM49YfGB.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQABAABUB8JZQC7AEPAI49aiAA/u/C2023vjCIkZNA6NPSovfCZSA1Fx1ArmMAAAA=",
+      "credit": "Flexispot Official",
+      "width": 1200,
+      "height": 900
+    },
+    "sony-wh-1000xm6": {
+      "localPath": "/images/items/sony-wh-1000xm6.webp",
+      "sourceUrl": "https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/image/Top_image_WH-1000XM5.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAoABUB8JaQAAhrxAYAA/vHgZtLpk1bpXUEJTF7dzYn4tufAvVOcg/JWjBRCOQRezEwnYr+HAAAA",
+      "credit": "Sony Corporation Official",
+      "width": 1200,
+      "height": 900
+    },
+    "playstation-5-pro": {
+      "localPath": "/images/items/playstation-5-pro.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/PlayStation_5_Pro_no_disc_drive.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoQABcAPzmEuVOvKKWisAgB4CcJYwDImCB8cPw5hB7cOVAAAP4/lNjs/RTgwxQhFYovI43XFvZl+5cQ2zESfcQ6JzOGBDrigYtsCKkcy6+y7mlyTBjgczFjQACAAA==",
+      "credit": "Sony PlayStation / Wikimedia Commons",
+      "width": 1200,
+      "height": 900
+    },
+    "shure-mv7-plus": {
+      "localPath": "/images/items/shure-mv7-plus.webp",
+      "sourceUrl": "https://products.shureweb.eu/cdn-cgi/image/width=1380,height=1380,format=auto/shure_product_db/product_images/files/b52/dda/ab-/original/780ff1532e5f3cb758123e44cec7768b.webp",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSJYAAAABgCNb27LmfjJQW8fQuWyGodcFQGsddA5bsJbeSkmygawik86Tj9//NUTEBOAVHF8JrZnsUeHWB7QIkrTHyyFS+Ali1ySXdpSg8on03brHEX6Vc/fN+rF6aI8i92E9jLGqKECQuFh//8bqIAFB8sUy5t/aIAA0Y+v7/2GNkHgVdctY7zUEwRNzyqAIKVIRJGElQhJeEBJWUDggOgAAAJABAJ0BKhAAEAAFQHwlpAACEN3wAAD+40o/gDu74QMezLnUvegGap3tMuITknTytH0Cw2PYBIgAAAA=",
+      "credit": "Shure Official",
+      "width": 1200,
+      "height": 900
+    },
+    "dell-u2723qe-monitor": {
+      "localPath": "/images/items/dell-u2723qe-monitor.webp",
+      "sourceUrl": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/monitors/u-series/u2723qe/media-gallery/monitor-u2723qe-gallery-1.psd?fmt=jpg&wid=1200",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjwBAABXRUJQVlA4WAoAAAAQAAAADwAADgAAQUxQSLMAAAABuS5E9D8UbmtrU5SZwd3SDbEOqIAOiGiEBijFiyAmX3Jyd5d/AjuHDr7ZjZgAhW3bIO0Y/9j+2tjbCcMgvLi5cnAnGUmMhV8vUT4GhJGU5QQXprgyMM6IJf2cpcapTDBgXf2TERJxal34YSSAxHGBYNzVjiBtwX39kJeKqjmQj+ALey34IQLaBjoOOEkVXxjE5ZzEpDXt/Kw8qfsgnq4aj6/n6WxmSs0QZqkvIe6FAOoRAABWUDggYgAAAPABAJ0BKhAADwAFQHwlsAJ0ANxArZBRWAD+3NcIiAJVKi4NXBcgs/2OM8riP38FA3BocxDitrH7xcLH5zAQHpDT7hGs4wjAr0XNk+5Zl+bM3m6Lq9eX2REw1l3hUbbCcAAA",
+      "credit": "Dell UltraSharp Official",
+      "width": 1200,
+      "height": 900
+    },
+    "macbook-pro-14-m-pro": {
+      "localPath": "/images/items/macbook-pro-14-m-pro.webp",
+      "sourceUrl": "https://www.apple.com/v/macbook-pro/b/images/meta/mbp_splitter__c9bpyxdvy6eu_og.png?202611121140",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoQAAgABUB8JaQAAtyZEkAA/u0g239lHRRJP3RmT5+P92sOZjcNgAAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "daikin-inverter-ac": {
+      "localPath": "/images/items/daikin-inverter-ac.webp",
+      "sourceUrl": "https://daikinindia.com/sites/default/files/inline-images/JTKJ35XV16VAA+RKJ35XV16VAA.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoQAAkABUB8JZQAAuorpgAA/mZFtcAG1Gj5zd4Xi18yTl3VsAA=",
+      "credit": "Daikin India Official",
+      "width": 1200,
+      "height": 900
+    },
+    "lg-dualup-28": {
+      "localPath": "/images/items/lg-dualup-28.webp",
+      "sourceUrl": "https://media.us.lg.com/transform/ecomm-PDPGallery-1100x730/82e72cf3-fecc-4875-9e20-5b42030e01d1/md08002085-zoom-01-jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAAsABUB8JZQAAsaVq+ycAAD+8dK5DK/fhmCMlPuF2K30u9qDZxFib92HxMBAAAA=",
+      "credit": "LG Electronics Official",
+      "width": 1200,
+      "height": 900
+    },
+    "herman-miller-aeron": {
+      "localPath": "/images/items/herman-miller-aeron.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Aeron_Chair.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoQABUAPzmEuVOvKKWisAgB4CcJZwAAUvtfdW7EvisN8AD+w/uIgXyAU1+hmmFK9syNCq1jrlw4mXsJ9x1DuiX35IjW/YyBk+c/Sh5dfSiXe0Xc3BZ7n0lsAAA=",
+      "credit": "Herman Miller / Wikimedia Commons",
+      "width": 1200,
+      "height": 900
+    },
+    "synology-ds224-plus": {
+      "localPath": "/images/items/synology-ds224-plus.webp",
+      "sourceUrl": "https://www.synology.com/img/products/detail/DS224plus/heading.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4WAoAAAAQAAAADwAACQAAQUxQSGkAAAABcFXbtqqcpyGIoAHc3d3hi3IkcUtBhnc57+7nGSJiAoiIzHimexoppJFfozxsSJxjpAS1wPxn/EakBHTBAAQu5NdoHGBHmIc8Q1ZgKSXjHXKEgGQb35AZhMXSwiOASC9Na+N9Y5QmhQAAVlA4IDQAAADQAQCdASoQAAoABUB8JaQAAlxbHnW/oAD+EaLBFMCYBq25bHMrmk8auizrLN3y9FokkAAA",
+      "credit": "Synology Official",
+      "width": 1200,
+      "height": 900
+    },
+    "engineering-books": {
+      "localPath": "/images/items/engineering-books.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoQAAwABUB8JZwAAtx760NwAP60DoUE2wVkp3L5BMRiMgAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "linen-shirts-pack": {
+      "localPath": "/images/items/linen-shirts-pack.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoQABgAPzmGu1QvKSYjMAgB4CcJYwAAW+vk+rsObHTw2YMAAP6K1L0HsHpafkWF229qsw+wLhe6ryt7egMY+7rX0QJcU6muB3l8OINIAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "caldigit-ts4-dock-kit": {
+      "localPath": "/images/items/caldigit-ts4-dock-kit.webp",
+      "sourceUrl": "https://www.caldigit.com/wp-content/uploads/elementor/thumbs/TS4_Vertical-Right-Front-View_White-BG_Version-05-pk1fejiico67gdmehpu3r291s56bu8zot09mk1lmyw.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQABAABUB8JaQAAq4KpxTfwAD+8d3p4DE1Al2p+uPx1dz0nOoWRFLnemKZAAAA",
+      "credit": "CalDigit Official",
+      "width": 1200,
+      "height": 900
+    },
+    "raymond-mtm-navy-blazer": {
+      "localPath": "/images/items/raymond-mtm-navy-blazer.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAsABUB8JZwAAxdv13Y8AP21rkGyWXf6QC96Tljt667MbARF+KyA2P8WtH4ws27NCZMwLWEw2yksxy5tEU8Jw3F3AgAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "raymond-mtm-charcoal-suit": {
+      "localPath": "/images/items/raymond-mtm-charcoal-suit.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQABAABUB8JZACdADQOhgoAAD+FS9WwPUlO8M2lBvTzMpdHeJzJNy0RE8nq8yKKg1Y0yUAAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "linen-trousers-pack": {
+      "localPath": "/images/items/linen-trousers-pack.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAABwAQCdASoQAAsABUB8JZwAAouZwAD+7eA55GZXyPR9ECDYBwF9bN6a0E/DA3bwe2EIKAAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "handcrafted-bandhgala": {
+      "localPath": "/images/items/handcrafted-bandhgala.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABQBACdASoQABgAPzmEuVOvKKWisAgB4CcJYgC7ABwwuQKBPjj3Az4y7W4AAPy0WR4z3RpqgxkwJWx6X/8awMOUwjNCpcc/RelgtmUOJDss7ezZJ1UOdzti6w/wwPJ3NJl6nqfO/e6Aq/bV+mHxa9cc+K1BM0JIY1r3eUu4mk84XWxg9xgmmZ5oMk/MwF5vEjFTa4NUIAAAAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "tan-penny-loafers": {
+      "localPath": "/images/items/tan-penny-loafers.webp",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/0416/3049/8971/files/og-1.png?v=1718619329",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQAAgABUB8JYgCdAD0jwXjNSAA/KVu16m0om13c/6QEqEBat6sYhXu/CIrfDwGpgA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "tissot-gentleman-powermatic": {
+      "localPath": "/images/items/tissot-gentleman-powermatic.webp",
+      "sourceUrl": "https://www.tissotwatches.com/dw/image/v2/BKKD_PRD/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw3f3555f3/product-pictures/935393fa-c1d5-4985-87c8-b0b2f7ae6ef9_T127_407_11_041_00_WRIST.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAABUB8JZQAAmsjTewwhcoAAP7n+4Lcb00/ZL7ZwLKqAGMfhjKnQcHyPU3OFXLPcz7n1g5PR7CA+HcMAG+KDfN1qWtiuCAaAA==",
+      "credit": "Tissot Swiss Watches Official",
+      "width": 1200,
+      "height": 900
+    },
+    "re-interceptor-650": {
+      "localPath": "/images/items/re-interceptor-650.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Royal_Enfield_650_Interceptor.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAQCdASoQAA0ABUB8JYwAAdKkeAAA/snJIjiEE4ZHVjvN4ZJdFWUywRiJHdH2R5BJJDoZmJqBvBstW6I9TFdXUO87a5VcH+rEGhH+R/Ar22PAC8AQAA==",
+      "credit": "Royal Enfield / Wikimedia Commons",
+      "width": 1200,
+      "height": 900
+    },
+    "re-himalayan-450": {
+      "localPath": "/images/items/re-himalayan-450.webp",
+      "sourceUrl": "https://static-cdn.team-bhp.com/prod/new-bike-cms/Royal-Enfield/Himalayan-450/2025/01/02/b6fe62a6-6a4b-4c32-a65a-b39067f72d93-Royal-Enfield_Himalayan-450_Right-Hand-View_Ride-Aesthetics_Brand-Image.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAkABUB8JZwAAn+++P/gAP7wOFdLGoCnHC/UA0w02EFp2pP7PTyKfvgnbfApgYu5tbdtwb04VSU4EAA=",
+      "credit": "Royal Enfield Media / Team-BHP",
+      "width": 1200,
+      "height": 900
+    },
+    "triumph-speed-400": {
+      "localPath": "/images/items/triumph-speed-400.webp",
+      "sourceUrl": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto:eco/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/t%20series/speed%20400/speed%20400%20family%20page/speed-400-my24-family-hero-1-1920x1080.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwAgCdASoQAAkABUB8JZACdAEQYwgDZ/E3AAD+tatpzzazrctcnChhC47tUYR0caQgYU0OGb/RvkkivSo2Rsa/pBd+AAAA",
+      "credit": "Triumph Motorcycles Official Media",
+      "width": 1200,
+      "height": 900
+    },
+    "bike-maintenance-fuel": {
+      "localPath": "/images/items/bike-maintenance-fuel.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1558980664-3a031cf67ea8?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAsABUB8JZQC7AEVrickiBhQAPZF02/2DNPFHhfriOb34Obl2xwo1ycncFhXY3Rjs+5G1iqVmJwwaM7rwAAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "bike-touring-accessories": {
+      "localPath": "/images/items/bike-touring-accessories.webp",
+      "sourceUrl": "https://cdn.sanity.io/images/3azemr64/production/36803f488284c57fa6294e23cbcd9116336b8a4e-1024x768.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAwABUB8JYgC7AECm41xA+O2gAD+AFpjY+GOcwxdfNGNZEIVHFPi8bAlsqcFg45CDHYLO4Mkmzw79FhFVnsx84sOi3Mdq56sbiAA",
+      "credit": "Quad Lock Official",
+      "width": 1200,
+      "height": 900
+    },
+    "motorcycle-riding-gear": {
+      "localPath": "/images/items/motorcycle-riding-gear.webp",
+      "sourceUrl": "https://axorhelmets.com/cdn/shop/files/633.jpg?v=1787206711",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQABAABUB8JaQAAxe1yBRnXfcQAP7ok58uJi3xNZ55fHXkYahr2XNy/dzoZ/SbjyhflhfvRCnAOaidHjt2dHvmGcIe5eG5QulSmfO5QAA=",
+      "credit": "Axor Helmets Official",
+      "width": 1200,
+      "height": 900
+    },
+    "fragrance-trio": {
+      "localPath": "/images/items/fragrance-trio.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAwCdASoQABEAPzmGuVOvKSWisAgB4CcJYwC/OCHfib53NESAAP7eWVi7mtaSFniSlQ5T6C/yo5swD4wkO+g36DRMPppeZ7imQAAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "daily-skincare-regimen": {
+      "localPath": "/images/items/daily-skincare-regimen.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAwCdASoQABgAPzmEuVOvKKWisAgB4CcJZQAAW+oEcsB3Z7A8eAD+5wnfV2KwWF3QrlUys91fYmkHgSunNKKtk62Wg4Us3a2wAAAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "oral-b-io-series-5": {
+      "localPath": "/images/items/oral-b-io-series-5.webp",
+      "sourceUrl": "https://cdn11.bigcommerce.com/s-2idmiil7bp/products/1489/images/13683/00069055133026_C1N0_COM_135560162__39633__72175.1784037640.386.513.jpg?c=1",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAQCdASoQABAABUB8JaQAAh24uwAA/vHgZpKAmk9CGDXXVr1nrD250BaU/anWc7MyRKzLouWMAHEp/tsI9BMn5r1TyxtAAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "protein-diet-monthly": {
+      "localPath": "/images/items/protein-diet-monthly.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAsABUB8JYgAIEAOG+GKwADOH5NLW3vpMeGXp/kes7QVv8ma9BCSSg8V13ENH1Qs9N8L8pq5YkOfppl/SOzY7fcN6HAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "meal-prep-kitchen-arsenal": {
+      "localPath": "/images/items/meal-prep-kitchen-arsenal.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoQAAsABUB8JZgCdAEQ49Fi/6BSAAD+xeFG8X/NdrUcH1UiRIr+wd+o/1ePflc/IUF45IAhl82N6uaXlMDLQkGZpeQ+dxfQZPbZ5kkAAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "philips-oneblade": {
+      "localPath": "/images/items/philips-oneblade.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAsABUB8JQBOgB9XtYdAAP0drkOSUMZAlcpX1YB9rw9p+aBExjcyLS9ZtRcSG9gFgAAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "gym-membership": {
+      "localPath": "/images/items/gym-membership.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAQCdASoQAAsABUB8JZQAAlKPLgAA/kLMOOCce4y0kMc5wFSICgLJZ01iwukQ2PlQZ5W/MWX98IkegrUWO8LN0evYmLuoOAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "orthopedic-mattress": {
+      "localPath": "/images/items/orthopedic-mattress.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAsABUB8JQBdgBwstLEpiogA/o+27Qo0DkZu6YPYn8P3QwcJdvJfDMncvzqPFE48uxPweByWOBl5KuYAAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "daily-supplements-stack": {
+      "localPath": "/images/items/daily-supplements-stack.webp",
+      "sourceUrl": "http://www.optimumnutrition.co.in/cdn/shop/files/brand_logo.jpg?v=1744639153",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAcABUB8JaQAAu0cAmogAP7KO3y/vMrqk+SlDjDvPjsO3j90s2syqlKfoRTAAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "garmin-forerunner-265": {
+      "localPath": "/images/items/garmin-forerunner-265.webp",
+      "sourceUrl": "https://res.garmin.com/en/products/010-02810-01/v/cf-lg.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQABAABUB8JZQAAwBpSaSWACgA/vHfg32sjPA5sXcL4zcp5fnSfZwCIQ+BNQqUOknQCnwQf44l2I8VFasgTKQZjkMSXbDKgr4ly8MIPKVsAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "iphone-pro-latest": {
+      "localPath": "/images/items/iphone-pro-latest.webp",
+      "sourceUrl": "https://www.apple.com/v/iphone/home/cl/images/meta/iphone__sgu02z38g362_og.png?202611041552",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACQAQCdASoQAAgABUB8JZwAAhzIIEAA/vAze6KMj8vWMGfEvr/52JwJhkIALauNzoAAAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "xiaomi-smart-air-purifier-4-pro": {
+      "localPath": "/images/items/xiaomi-smart-air-purifier-4-pro.webp",
+      "sourceUrl": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSFAAAAABYBvZtpKHO4XRAAW4Z1IwZA6hu1NAREwA3EuKgiCSRzj4U5oPCuBH4dT1k3Wu7SbzXNf/WzC13WSciaaun6wjDOQmTgoJsD0AlGVZFoF7AVZQOCBCAAAA0AEAnQEqEAAQAAVAfCWkAALtf6WepAAA/u1Ktkh/AerdIRU5MlQVWsPaEgva8hmQqD5hryof7QgJIiDZ7l09gAAA",
+      "credit": "Xiaomi Official Media",
+      "width": 1200,
+      "height": 900
+    },
+    "home-gym-strength-station": {
+      "localPath": "/images/items/home-gym-strength-station.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAsABUB8JQBOgBxNHGDyukjAAP6HjUZc4iNY31vliIEw1oXFowcLo2FYaOJ4Ss+oCSNQmnyrnbRX0AA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "kent-supreme-water-purifier": {
+      "localPath": "/images/items/kent-supreme-water-purifier.webp",
+      "sourceUrl": "https://www.kent.co.in/cdn/shop/files/kent-supreme-1.webp?v=1774355349",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAADwAADAAAQUxQSF4AAAAJcFvbthI9NGQRWhcuKRGLCijNKyCjBTqY1EP3mcznfSkhIiYAAED1DU15ricrwJux78pmmOeEB6Dim3DD4EJ4MN0JV6Y7YYrtNoQbdgNuV+xKWj+QE+mm206SpcUfVlA4ID4AAADQAQCdASoQAA0ABUB8JZwAAsY4lPs6AACh/FtvdjXvKb/nYGTGlALncHy6u1/fRp5ZdCepXYTzfkwg0AYAAA==",
+      "credit": "Kent RO Systems Official",
+      "width": 1200,
+      "height": 900
+    },
+    "health-term-insurance": {
+      "localPath": "/images/items/health-term-insurance.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoQAAsABUB8JaQAAudlKnyXoAD+9DCHN3HR8YNuOT83yhzpOaEyuHAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "college-fees-balance": {
+      "localPath": "/images/items/college-fees-balance.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsABUB8JQBOgBa1I1V7pgAA/uBE3a6fUbAn6haUbnJ/mStoKdD7KEqQwhZ3Px1V4+u4xhHlCB89IfxEH1+7F/XrTCqgAAA=",
+      "credit": "Higher Education / Graduation",
+      "width": 1200,
+      "height": 900
+    },
+    "academic-contingency-fund": {
+      "localPath": "/images/items/academic-contingency-fund.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAsABUB8JZwAAgP9Iovu4AD7pGOHbeHjvFiBs1rYzH6/L4WfXLoMigOZc1BI4FCqPhBMQyagDO2F8XJg2D3Adn4Ho/QAAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "college-commute-transit": {
+      "localPath": "/images/items/college-commute-transit.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoQAAsABUB8JQBOgCBibzTg17EAAP34fmttVTvbPLVNNkiJY/buy2lp96RAqlERovHCdIAA",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "databricks-data-engineer-cert": {
+      "localPath": "/images/items/databricks-data-engineer-cert.webp",
+      "sourceUrl": "https://www.databricks.com/sites/default/files/2022/04/databricks-certification-and-badging-og.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQAAgABUB8JZQAAxYYCB4rxAAA/usj2fTi9OwArQ3sN0kQGFqYIxt3kHuOxBkqxLgAAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "titan-raga-viva-watch": {
+      "localPath": "/images/items/titan-raga-viva-watch.webp",
+      "sourceUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw480b16bf/images/Titan/Catalog/2606WM01_1.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQABAABUB8JZQAAlxZeVUpFAD+8eDIiqLvHJ637bgbLJM0Km+SSLw4AAA=",
+      "credit": "Titan Watches Official",
+      "width": 1200,
+      "height": 900
+    },
+    "aws-data-engineer-cert": {
+      "localPath": "/images/items/aws-data-engineer-cert.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAABwAQCdASoQAAsABUB8JZQC7AFAAAD+8CCjvWse/p/XuF2r/zxxph//sAfAAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "curated-experience-escapes": {
+      "localPath": "/images/items/curated-experience-escapes.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAQCdASoQAAsABUB8JZQAAQzDVAAA/vK01ComK3XMwFvJuGTClj1N8Edg6Lf7UpXKAe5cJjP75w3Ma6J9q49gAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "fine-jewelry-tanishq": {
+      "localPath": "/images/items/fine-jewelry-tanishq.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwBACdASoQABgAPzmEuVOvKKWisAgB4CcJZgC06CPt0rt+nKn+ztgtZgAA9E2A2pH36UmNTGU2QB7KrTkuLTygdJ00qBhYo1uBfJEPyidBtdu84DlYqDGtBgTBP4EAAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "hidesign-leather-handbag": {
+      "localPath": "/images/items/hidesign-leather-handbag.webp",
+      "sourceUrl": "https://hidesign.com/cdn/shop/products/jaxon-womens-black-tote-bag_1_4e3ed552-db4e-4b51-a64f-90773ee07655_1024x1024.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQABAABUB8JaQAAu0exy7yvbAA/vHcE9wJDtaqwcxmIOKSn16GxZmorKme1SksKxbGzzMMOH2I4FBbrCSFMAAA",
+      "credit": "Hidesign India Official",
+      "width": 1200,
+      "height": 900
+    },
+    "spiti-ladakh-motorcycle-expedition": {
+      "localPath": "/images/items/spiti-ladakh-motorcycle-expedition.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAsABUB8JagCdADze7UQAP6yMUyBPOUDcafqkM1gFzckSTKd2TFUdJTm2CtoKeyR+A8mTyDT8E/qXplAAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "solitaire-engagement-ring": {
+      "localPath": "/images/items/solitaire-engagement-ring.webp",
+      "sourceUrl": "https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/S/R/SR04649-1PP600_11_listfront.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAADQAQCdASoQABAABUB8JZQAAudcQnlQAAD+77XlIzktcCjYwFAAAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "south-india-quarterly-trips": {
+      "localPath": "/images/items/south-india-quarterly-trips.webp",
+      "sourceUrl": "https://www.keralatourism.org/ktadmin/img/pages/share/home-1692253045_bb529b71ed8cfa5ab903.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAQCdASoQAAgABUB8JbACdACoDdLoAP7AaI1NGuKJj7Fz4D42NpYf4KfjKBTl5igKbvDThljsR5LB20B0kaozSE2FBSFAv80/14Gdkwxh/CcMAAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "residential-land-chennai": {
+      "localPath": "/images/items/residential-land-chennai.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAwAgCdASoQAAkABUB8JbACdH8IwABQ0lAcAAD9UYyOaAT+VylMGMW7OF3+Fd6M4QXP7e2wjvAAAA==",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "custom-2bhk-rcc-home": {
+      "localPath": "/images/items/custom-2bhk-rcc-home.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAsABUB8JQBOgCDcyQqdTgAA/aaa2xh1g5lSORIhrq3jDclqY2j/yj2wuEGrKEyzQjCgpvg8D1TMs5jf54AiUAA=",
+      "credit": "Curated Product Photography",
+      "width": 1200,
+      "height": 900
+    },
+    "family-suv-creta-kushaq": {
+      "localPath": "/images/items/family-suv-creta-kushaq.webp",
+      "sourceUrl": "https://static-cdn.team-bhp.com/prod/new-car-cms/Hyundai_Creta_2024_Exterior_1_67a9586146.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAkABUB8JZQAAtudw5oAAOEcE5qqOKEx3ZdU+x5bT55pSVvJqAre+F2xJaI7EeLLj4vvxJ3ct9AqcCAAAA==",
+      "credit": "Hyundai Motor / Team-BHP Press",
+      "width": 1200,
+      "height": 900
+    },
+    "seiko-5-srpe": {
+      "localPath": "/images/items/seiko-5-srpe.webp",
+      "sourceUrl": "https://www.seikowatches.com/middleeast-en/-/media/Images/Product--Image/All/Seiko/2022/02/20/02/23/SRPE51K1/SRPE51K1.png",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRjABAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSKUAAAABgGJrmzLk+WZwd9dd0KmeLLk72dkI3X0LZDqNyqE5zPwvMuwhIiaAv0VTG0tzTRhJT7eyoEF8wig50ee7dv/x7Cko02MrBhi1D8qkoA08kMOigqSouzwMjItEptiFx3C3ipL0pVE8OI4V/gQd4MAzppjax4NRca8oRR0WYYBnU0GZnlpxAEbxkWLQDUbS06PPN63iU0bns740RE4KXP/c7FwTBgAAVlA4IGQAAAAwAgCdASoQABAABUB8JZwAD4oPACsvoNlpQAD+ZiCdxVXsCCvcyRUchv75u+iXMM98DoP44HoHmqkJ0ywnBTVz9jxGfkROzkXEdBJ38B/JWDIXwcs7+QZXfSgjHqVs3Vn2AQAA",
+      "credit": "Seiko Watch Corporation Official",
+      "width": 1200,
+      "height": 900
+    },
+    "braun-series-9-pro": {
+      "localPath": "/images/items/braun-series-9-pro.webp",
+      "sourceUrl": "https://images.ctfassets.net/318t4e73nih6/1UFZ0JW8svDuBkZIuoXjDi/7c6e5e032bf963069a8df2f1f47ecea4/pdp-mpg-shelf-series-shavers-series-9-pro-9467cc.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAwABUB8JaQAAlnQORhqAAD+7dfVB0YS9Eot8fbGHOosplwA795htzvY8jScxGiTCbFSuloF/jD5JNuSCUBAAAA=",
+      "credit": "Braun / P&G Official",
+      "width": 1200,
+      "height": 900
+    },
+    "oral-b-io-series-9": {
+      "localPath": "/images/items/oral-b-io-series-9.webp",
+      "sourceUrl": "https://images.ctfassets.net/6azfn76zuilv/7hkxk1prmWYr9mKG1MUAWP/1e49654b7c923833526a35dbc7f229c2/Oral-B-io9_Front-w-pack_1500x1500px.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAQCdASoQABAABUB8JZwAApXAMrOgAP7t62drxUmN3EzU4tKAALKXd/iGX6yN+XbNcjP8+BqHaLy4URXl/YlKeM1xqxTddOeV3D8rX7ngOITwe2zZoAAA",
+      "credit": "Oral-B Official",
+      "width": 1200,
+      "height": 900
+    },
+    "dior-sauvage-edp": {
+      "localPath": "/images/items/dior-sauvage-edp.webp",
+      "sourceUrl": "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000493826058/-LxjXkk3I-000000000493826058_1.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQABAABUB8JZwAAlxGMftfgAAA/vHfUr11pngPUnIf2rUXvsYKvSHcjeOkvsP+M8cldt5taw1rZ+tGuiRbu6ceD4m+tAhwAAA=",
+      "credit": "Christian Dior Parfums / Sephora",
+      "width": 1200,
+      "height": 900
+    },
+    "bleu-de-chanel-parfum": {
+      "localPath": "/images/items/bleu-de-chanel-parfum.webp",
+      "sourceUrl": "https://www.sephora.com/productimages/sku/s3012754-main-zoom.jpg",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQABAABUB8JbACdADc9Uo/oAD+8eBhd56w/XuFrS2qqPH9Uy8TCwhBrRsnVx93FIeMUPYwmyOv6Ji9JriSjrRAAAA=",
+      "credit": "Chanel Parfums / Sephora",
+      "width": 1200,
+      "height": 900
+    }
+  },
+  "categories": {
+    "gaming-pc": {
+      "localPath": "/images/categories/gaming-pc.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoQABgAPzmGulQvKSWjMAgB4CcJZgCdACHfRoC7qzrtvbk94QAA/uvTU+3fJXb0pMB5l7xPq+8SiXlZTbGPO/kkVHK1qjW+CMEBRbAXZxKmxTh5xIwZs52tITOwPgFe7RBX+3CgjkDEOJh9ZgQOK5u7ESLUm+fPC9gUg10zLudElgAA"
+    },
+    "gaming-room": {
+      "localPath": "/images/categories/gaming-room.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAQCdASoQAAsABUB8JYwAAZ8sS2eAAP2tKvDaABgket7eOP4Z6zU5RpbvnmqC/lSEnqmNmVexSDTRnUrsshQ3vao3tQAA"
+    },
+    "dev-setup": {
+      "localPath": "/images/categories/dev-setup.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAA0ABUB8JbACdAERGDtygAD+5J4lEoH3UakBxYIy0rxR3K3TXos/gkhl+wRv/GArPY7eIS8b1cgRj/T7ngioPjW9EJZVdCAYAAAA"
+    },
+    "outfits": {
+      "localPath": "/images/categories/outfits.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAsABUB8JZwAAxdv13Y8AP21rkGyWXf6QC96Tljt667MbARF+KyA2P8WtH4ws27NCZMwLWEw2yksxy0Qmgr8BtGEAA=="
+    },
+    "bike": {
+      "localPath": "/images/categories/bike.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoQAAsABUB8JYwCdADNhgAA/kjMt6sH10Z0OfcegIRqmqHLcAdNgxd6ExhjQrMVvgAAAA=="
+    },
+    "grooming": {
+      "localPath": "/images/categories/grooming.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAwCdASoQABEAPzmGuVOvKSWisAgB4CcJYwC/OCHfib53lh8AAP7eWVi7mtaSFniSlQ5T6DALRgPjCxG6ZHOef7P/9frzQlzkKkAA"
+    },
+    "diet": {
+      "localPath": "/images/categories/diet.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAsABUB8JYgAIEAOG+GKwADONsic6Na9bvtypRKpTdyL41nIsJsTihj/UXzyNwZ8ZfG4OoB9jfLHwIdvRizIdl5TVBQA"
+    },
+    "home-health": {
+      "localPath": "/images/categories/home-health.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoQABwAPzmEuVOvKKWisAgB4CcJYgC7ACE1EFujUlTTbrdOZYQAAP5b1S+6Tr+P/Yycwo6NZe6e0qBT8gPpLDV5l199Te9Xei/wC1YYjJEs0/06MhNmRQw3+aVq+z4a0w2UeYLoJZ/+sHA+twS/AlFLYyt4U8WK0X4g+QAAL+gBox4qAAA="
+    },
+    "gifts": {
+      "localPath": "/images/categories/gifts.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAoABUB8JQBWACLPv8naawSAAP7D75TMemS4oGIKe9O4pqdHt6+KTl1++rKlASJm4wCJEOuhAe+FuAA="
+    },
+    "travel": {
+      "localPath": "/images/categories/travel.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAsABUB8JbACdAEVz7597gvqkAD+s+6yU3vr2AwKQEf1wk2FZ74E5MY8AViWwnGdZTbs5o73BPE8i2EtZh43ac0AAA=="
+    },
+    "big-purchases": {
+      "localPath": "/images/categories/big-purchases.webp",
+      "sourceUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+      "status": "downloaded",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAsABUB8JQBOgBm2tMwwAP2mmtsapOlSUXeRIvM9W8Ybkd+ECPP2NXkMv61IJ4gvzlC/otaE8/bkv0aMc4d/gAA="
+    }
+  }
+}
